@@ -1,4 +1,7 @@
-﻿using Xamarin.Forms;
+﻿using Xamarin.Essentials;
+using Xamarin.Essentials.Interfaces;
+using Xamarin.Forms;
+using XF.Material.Forms.UI.Dialogs;
 
 namespace Dorsavi.Xamarin.Forms.Helpers
 {

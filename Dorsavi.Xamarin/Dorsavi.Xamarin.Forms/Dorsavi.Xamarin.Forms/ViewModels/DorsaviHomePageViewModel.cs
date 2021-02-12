@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using Dorsavi.Xamarin.Forms.Constants;
 using Dorsavi.Xamarin.Forms.Exceptions;
+using Dorsavi.Xamarin.Forms.Helpers;
 using Dorsavi.Xamarin.Forms.Models;
 using Dorsavi.Xamarin.Forms.Prism.Extensions;
 using Dorsavi.Xamarin.Forms.RemoteServer.Models;
@@ -15,6 +16,8 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Input;
+using Xamarin.Essentials;
+using XF.Material.Forms.UI.Dialogs;
 
 namespace Dorsavi.Xamarin.Forms.ViewModels
 {
@@ -67,14 +70,16 @@ namespace Dorsavi.Xamarin.Forms.ViewModels
 
         private async void FetchItemsFromRemoteServer()
         {
-            Task.Factory.StartNew(() {
+            Task.Factory.StartNew(async () =>
+            {
                 try
                 {
                     var fetchedResults = await CommonHttpClientConsumer.RetrieveMelbourneResultsFromAzureRemoteResource();
                     if (fetchedResults != null && fetchedResults.Count != 0)
                     {
                         //Clear the Data Cache from the local Storage
-                        this.databaseServiceImplementation.CloseDatabase
+                        this.databaseServiceImplementation.ClearAllData();
+
                         //Begin Processing the results
                         var localMappedItems = fetchedResults.ConvertAll(w => this.mappingServiceImplementation.Map<DorsaviItemsDto, DorsaviItems>(w)).ToList();
                         var localPetItems = fetchedResults.SelectMany(w => w.Pets).ToList().ConvertAll(i => this.mappingServiceImplementation.Map<DorsaviPetItemsDto, DorsaviPetItems>(i)).ToList();
@@ -82,22 +87,26 @@ namespace Dorsavi.Xamarin.Forms.ViewModels
                         //Begin Processing & Storing the items into the Database
                         this.databaseServiceImplementation.InsertItems<DorsaviItems>(localMappedItems);
                         this.databaseServiceImplementation.InsertItems<DorsaviPetItems>(localPetItems);
+
+                        MainThread.InvokeOnMainThreadAsync(async() =>
+                        {
+
+                        })
                     }
                 }
-
                 catch (FailedFetchViaInternetConnectionException connectivityException)
                 {
-
+                    MaterialAlertDialogueHelper.OpenAlertDialogueWithMessage("Lost Internet Connection", "Failed to connect to remote server. It seems that there is no internet connection");
                 }
                 catch (FailedFetchZeroCountResultException zeroCountException)
                 {
-
+                    MaterialAlertDialogueHelper.OpenAlertDialogueWithMessage("No Results Found", "Could not find any results from the remote server");
                 }
                 catch (FailedToFindResourceException failedToFindResourceException)
                 {
-
+                    MaterialAlertDialogueHelper.OpenAlertDialogueWithMessage("Could not Find Resource", "404, Could not find the queried results");
                 }
-            }).;
+            }, TaskCreationOptions.PreferFairness);
         }
     }
 }

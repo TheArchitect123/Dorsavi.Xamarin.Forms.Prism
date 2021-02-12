@@ -38,6 +38,13 @@ namespace Dorsavi.Xamarin.Forms.Services
         }
 
         #region Api (Business Logic)
+
+        public void ClearAllData()
+        {
+            _connection.DeleteAll(_connection.GetMapping(typeof(DorsaviItems)));
+            _connection.DeleteAll(_connection.GetMapping(typeof(DorsaviPetItems)));
+
+        }
         public void BeginTransaction() => _connection.BeginTransaction();
         public void CloseDatabase() => _connection.Close();
 
