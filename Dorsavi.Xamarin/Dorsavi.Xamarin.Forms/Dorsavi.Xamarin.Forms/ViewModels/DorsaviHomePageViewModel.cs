@@ -81,17 +81,28 @@ namespace Dorsavi.Xamarin.Forms.ViewModels
                     if (fetchedResults != null && fetchedResults.Count != 0)
                     {
                         //Begin Processing the results
-                        var localMappedItems = fetchedResults.ConvertAll(w => this.mappingServiceImplementation.Map<DorsaviItemsDto, DorsaviItems>(w)).ToList();
-                        var localPetItems = fetchedResults.SelectMany(w => w.Pets).ToList().ConvertAll(i => this.mappingServiceImplementation.Map<DorsaviPetItemsDto, DorsaviPetItems>(i)).ToList();
+                        this.databaseServiceImplementation.InsertItems<DorsaviItems>(fetchedResults.ConvertAll(w =>
+                        this.mappingServiceImplementation.Map<DorsaviItemsDto, DorsaviItems>(w)).ToList()); //Insert the Parent Elements into the Database
 
-                        //Begin Processing & Storing the items into the Database
-                        this.databaseServiceImplementation.InsertItems<DorsaviItems>(localMappedItems);
-                        this.databaseServiceImplementation.InsertItems<DorsaviPetItems>(localPetItems);
+                        //Add the Pet Items into the database
+                        this.databaseServiceImplementation.InsertItems<DorsaviPetItems>(fetchedResults.SelectMany(i => i.Pets).ToList()
+                                .ConvertAll((w) => this.mappingServiceImplementation.Map<DorsaviPetItemsDto, DorsaviPetItems>(w)));
 
-                        MainThread.InvokeOnMainThreadAsync(async () =>
-                        {
-                            this.RaisePropertyChanged(); //Force all properties to refresh
-                        });
+
+                        //CONFIGURE THE FOREIGN KEY RELATIONSHIPS HERE
+                        //Query against each fetched item to get the Pets that belong to each Person
+                        //foreach (var fetchedItem in fetchedResults)
+                        //{
+
+
+                        //    //Begin Processing & Storing the items into the Database
+                        //    this.databaseServiceImplementation.InsertItems<DorsaviPetItems>(localPetItems);
+
+                        //    MainThread.InvokeOnMainThreadAsync(async () =>
+                        //    {
+                        //        this.RaisePropertyChanged(); //Force all properties to refresh
+                        //    });
+                        //}
                     }
                 }
                 catch (FailedFetchViaInternetConnectionException connectivityException)
