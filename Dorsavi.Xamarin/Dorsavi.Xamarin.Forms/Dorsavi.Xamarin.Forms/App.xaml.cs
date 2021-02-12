@@ -1,13 +1,14 @@
-using Dorsavi.Xamarin.Forms.ViewModels;
-using Dorsavi.Xamarin.Forms.Views;
-using Prism;
-using Prism.Ioc;
 using Xamarin.Essentials.Implementation;
 using Xamarin.Essentials.Interfaces;
 using Xamarin.Forms;
 
 namespace Dorsavi.Xamarin.Forms
 {
+    using Dorsavi.Xamarin.Forms.ViewModels;
+    using Dorsavi.Xamarin.Forms.Views;
+    using Prism;
+    using Prism.Ioc;
+
     public partial class App
     {
         public App(IPlatformInitializer initializer)
@@ -25,9 +26,10 @@ namespace Dorsavi.Xamarin.Forms
         protected override void RegisterTypes(IContainerRegistry containerRegistry)
         {
             containerRegistry.RegisterSingleton<IAppInfo, AppInfoImplementation>();
-
             containerRegistry.RegisterForNavigation<NavigationPage>();
-            containerRegistry.RegisterForNavigation<MainPage, MainPageViewModel>();
+            containerRegistry.RegisterForNavigation<DorsaviDefaultPage, DorsaviDefaultPageViewModel>();
+            containerRegistry.RegisterForNavigation<DorsaviHomePage, DorsaviHomePageViewModel>();
+            containerRegistry.RegisterForNavigation<DorsaviSettingsPage, DorsaviSettingsPageViewModel>();
         }
     }
 }

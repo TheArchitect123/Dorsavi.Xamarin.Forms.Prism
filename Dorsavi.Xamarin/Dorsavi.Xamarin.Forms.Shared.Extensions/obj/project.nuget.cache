@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "dgSpecHash": "U/W2vu1gBpRNHMsIb7yGY3mgtdb2OYPsjx+19tbpmKQkNLC0CPIYBT/QJ245uEZpkIQFPl6umF2Rs9q5EQ364Q==",
+  "success": true,
+  "projectFilePath": "C:\\Commercial\\Dorsavi.Xamarin.Forms.Prism\\Dorsavi.Xamarin\\Dorsavi.Xamarin.Forms.Shared.Extensions\\Dorsavi.Xamarin.Forms.Shared.Extensions.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Dan Gerchcovich\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\Dan Gerchcovich\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
+    "C:\\Users\\Dan Gerchcovich\\.nuget\\packages\\plugin.security\\1.0.2\\plugin.security.1.0.2.nupkg.sha512",
+    "C:\\Users\\Dan Gerchcovich\\.nuget\\packages\\system.diagnostics.eventlog\\5.0.1\\system.diagnostics.eventlog.5.0.1.nupkg.sha512",
+    "C:\\Users\\Dan Gerchcovich\\.nuget\\packages\\system.security.principal.windows\\5.0.0\\system.security.principal.windows.5.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}
