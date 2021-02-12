@@ -1,8 +1,10 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Text;
 
-namespace Dorsavi.Xamarin.Forms.Shared.Extensions
+namespace Dorsavi.Xamarin.Forms.Extensions
 {
-    public static class ExceptionExtension
+    internal static class ExceptionExtensions
     {
         public static Exception HandleException(this Exception ex)
         {
@@ -15,5 +17,6 @@ namespace Dorsavi.Xamarin.Forms.Shared.Extensions
             LogExtensions.LogException(ex);
             return ex;
         }
+
     }
 }

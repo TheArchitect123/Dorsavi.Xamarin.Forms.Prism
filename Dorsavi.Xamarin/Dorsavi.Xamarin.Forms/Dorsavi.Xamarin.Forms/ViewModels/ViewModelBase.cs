@@ -1,9 +1,9 @@
-﻿namespace Dorsavi.Xamarin.Forms.ViewModels
-{
-    using Prism.Mvvm;
-    using Prism.Navigation;
+﻿using Prism.Mvvm;
+using Prism.Navigation;
 
-    public class ViewModelBase : BindableBase, IInitialize, INavigationAware, IDestructible
+namespace Dorsavi.Xamarin.Forms.ViewModels
+{
+    public abstract class ViewModelBase : BindableBase, IInitialize, INavigationAware, IDestructible
     {
         protected INavigationService NavigationService { get; private set; }
 

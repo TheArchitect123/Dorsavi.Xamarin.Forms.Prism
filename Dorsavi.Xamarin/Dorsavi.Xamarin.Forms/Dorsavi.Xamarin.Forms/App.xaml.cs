@@ -2,12 +2,13 @@ using Xamarin.Essentials.Implementation;
 using Xamarin.Essentials.Interfaces;
 using Xamarin.Forms;
 
+using Prism;
+using Prism.Ioc;
+
 namespace Dorsavi.Xamarin.Forms
 {
     using Dorsavi.Xamarin.Forms.ViewModels;
     using Dorsavi.Xamarin.Forms.Views;
-    using Prism;
-    using Prism.Ioc;
 
     public partial class App
     {
