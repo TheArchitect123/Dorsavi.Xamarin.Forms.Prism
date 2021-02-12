@@ -1,4 +1,5 @@
 ﻿using SQLite;
+using SQLiteNetExtensions.Attributes;
 using System.ComponentModel.DataAnnotations;
 
 namespace Dorsavi.Xamarin.Forms.Models
@@ -13,5 +14,12 @@ namespace Dorsavi.Xamarin.Forms.Models
 
         [Required]
         public string Type { get; set; }
+
+        //Configure the Foreign Key Relationships (Required for Sqlite Extensions Package to work)
+        [ForeignKey(typeof(DorsaviItems))]
+        public int DorsaviItemId { get; set; }
+
+        [ManyToOne]
+        public DorsaviItems ParentItem { get; set; }
     }
 }

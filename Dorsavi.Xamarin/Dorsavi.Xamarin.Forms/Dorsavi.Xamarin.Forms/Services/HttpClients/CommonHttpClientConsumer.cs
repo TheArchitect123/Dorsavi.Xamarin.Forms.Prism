@@ -46,12 +46,12 @@ namespace Dorsavi.Xamarin.Forms.Services.HttpClients
         }
     }
 
+    /// <summary>
+    /// Fetch the HttpClient from HttpClientFactory
+    /// </summary>
+    /// <returns></returns>
     internal static class HttpClientHelper
     {
-        /// <summary>
-        /// Fetch the HttpClient from HttpClientFactory
-        /// </summary>
-        /// <returns></returns>
         public static HttpClient GetHttpClient() => RegisterWebServices.GetService<IHttpClientFactory>().CreateClient(nameof(CommonHttpClientConsumer));
     }
 }

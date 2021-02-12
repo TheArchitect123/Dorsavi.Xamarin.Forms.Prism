@@ -6,4 +6,22 @@
              Title="{Binding PageTitle, Mode=OneWay}"
              x:Class="Dorsavi.Xamarin.Forms.Views.DorsaviHomePage">
 
+    <ListView IsPullToRefreshEnabled="True" RefreshCommand="{Binding RefreshItemsFromRemoteServerCommand, Mode=OneWay}"
+              IsRefreshing="{Binding IsCollectionRefreshing, Mode=OneWay}">
+
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <ViewCell>
+                    <!--Draw the Items-->
+                    <!--Draw a tree view inside each pet item-->
+                    <StackLayout>
+                        <Label Text="{Binding Name}" />
+                        <Button Text="Show"
+                Command="{Binding BindingContext.ItemSelectedCommand,Source={x:Reference list}}"
+                CommandParameter="{Binding .}" />
+                    </StackLayout>
+                </ViewCell>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
 </ContentPage>

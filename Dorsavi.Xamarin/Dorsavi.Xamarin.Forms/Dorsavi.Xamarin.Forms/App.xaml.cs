@@ -1,17 +1,15 @@
-using Xamarin.Essentials.Implementation;
-using Xamarin.Essentials.Interfaces;
-using Xamarin.Forms;
-
-using Prism;
-using Prism.Ioc;
-
 namespace Dorsavi.Xamarin.Forms
 {
     using Dorsavi.Xamarin.Forms.Constants;
     using Dorsavi.Xamarin.Forms.ViewModels;
     using Dorsavi.Xamarin.Forms.Views;
+
+    using global::Xamarin.Forms;
     using global::Xamarin.Essentials;
-    using XF.Material.Forms.UI.Dialogs;
+
+    using global::Prism;
+    using global::Prism.Ioc;
+    using global::XF.Material.Forms.UI.Dialogs;
 
     public partial class App
     {
@@ -22,16 +20,14 @@ namespace Dorsavi.Xamarin.Forms
 
         protected override async void OnInitialized()
         {
-            InitializeComponent();
+            this.InitializeComponent();
 
-            await NavigationService.NavigateAsync(NavigationRoutes.DefaultRoute);
+            await this.NavigationService.NavigateAsync(NavigationRoutes.DefaultRoute);
             ExternalSubscriptionsManager.AppSubscriptions();
         }
 
         protected override void RegisterTypes(IContainerRegistry containerRegistry)
         {
-            //Register ViewModels 
-            containerRegistry.RegisterSingleton<IAppInfo, AppInfoImplementation>();
             containerRegistry.RegisterForNavigation<NavigationPage>();
             containerRegistry.RegisterForNavigation<DorsaviDefaultPage, DorsaviDefaultPageViewModel>();
             containerRegistry.RegisterForNavigation<DorsaviHomePage, DorsaviHomePageViewModel>();

@@ -88,3 +88,7 @@ XF.Material
 SQLitePCLRaw.lib.e_sqlite3.android
 ModernHttpClient
 Square.OkHttp3
+SQLitePCLRaw.lib.e_sqlcipher.android
+SQLitePCLRaw.batteries_green
+SQLitePCLRaw.lib.e_sqlite3
+SQLitePCLRaw.provider.e_sqlite3

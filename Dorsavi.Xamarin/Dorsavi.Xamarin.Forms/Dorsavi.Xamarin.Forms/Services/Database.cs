@@ -1,14 +1,12 @@
-﻿using Dorsavi.Xamarin.Forms.Constants;
-using Dorsavi.Xamarin.Forms.Models;
-using Prism.Navigation;
-using SQLite;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-
-namespace Dorsavi.Xamarin.Forms.Services
+﻿namespace Dorsavi.Xamarin.Forms.Services
 {
+    using Dorsavi.Xamarin.Forms.Models;
+    using global::SQLite;
+    using global::System;
+    using global::System.Collections.Generic;
+    using global::System.Linq;
+    using global::System.Threading.Tasks;
+
     public class Database
     {
         public SQLiteConnection _connection { get; set; }
@@ -39,12 +37,6 @@ namespace Dorsavi.Xamarin.Forms.Services
 
         #region Api (Business Logic)
 
-        public void ClearAllData()
-        {
-            _connection.DeleteAll(_connection.GetMapping(typeof(DorsaviItems)));
-            _connection.DeleteAll(_connection.GetMapping(typeof(DorsaviPetItems)));
-
-        }
         public void BeginTransaction() => _connection.BeginTransaction();
         public void CloseDatabase() => _connection.Close();
 
