@@ -1,0 +1,9 @@
+C:\Commercial\Dorsavi.Xamarin.Forms.Prism\Dorsavi.Xamarin\Dorsavi.Xamarin.Forms.RemoteServer.Resources\bin\Debug\netstandard2.0\Dorsavi.Xamarin.Forms.RemoteServer.Resources.deps.json
+C:\Commercial\Dorsavi.Xamarin.Forms.Prism\Dorsavi.Xamarin\Dorsavi.Xamarin.Forms.RemoteServer.Resources\bin\Debug\netstandard2.0\Dorsavi.Xamarin.Forms.RemoteServer.Resources.dll
+C:\Commercial\Dorsavi.Xamarin.Forms.Prism\Dorsavi.Xamarin\Dorsavi.Xamarin.Forms.RemoteServer.Resources\bin\Debug\netstandard2.0\Dorsavi.Xamarin.Forms.RemoteServer.Resources.pdb
+C:\Commercial\Dorsavi.Xamarin.Forms.Prism\Dorsavi.Xamarin\Dorsavi.Xamarin.Forms.RemoteServer.Resources\obj\Debug\netstandard2.0\Dorsavi.Xamarin.Forms.RemoteServer.Resources.csprojAssemblyReference.cache
+C:\Commercial\Dorsavi.Xamarin.Forms.Prism\Dorsavi.Xamarin\Dorsavi.Xamarin.Forms.RemoteServer.Resources\obj\Debug\netstandard2.0\Dorsavi.Xamarin.Forms.RemoteServer.Resources.AssemblyInfoInputs.cache
+C:\Commercial\Dorsavi.Xamarin.Forms.Prism\Dorsavi.Xamarin\Dorsavi.Xamarin.Forms.RemoteServer.Resources\obj\Debug\netstandard2.0\Dorsavi.Xamarin.Forms.RemoteServer.Resources.AssemblyInfo.cs
+C:\Commercial\Dorsavi.Xamarin.Forms.Prism\Dorsavi.Xamarin\Dorsavi.Xamarin.Forms.RemoteServer.Resources\obj\Debug\netstandard2.0\Dorsavi.Xamarin.Forms.RemoteServer.Resources.csproj.CoreCompileInputs.cache
+C:\Commercial\Dorsavi.Xamarin.Forms.Prism\Dorsavi.Xamarin\Dorsavi.Xamarin.Forms.RemoteServer.Resources\obj\Debug\netstandard2.0\Dorsavi.Xamarin.Forms.RemoteServer.Resources.dll
+C:\Commercial\Dorsavi.Xamarin.Forms.Prism\Dorsavi.Xamarin\Dorsavi.Xamarin.Forms.RemoteServer.Resources\obj\Debug\netstandard2.0\Dorsavi.Xamarin.Forms.RemoteServer.Resources.pdb

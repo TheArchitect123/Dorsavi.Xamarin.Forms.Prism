@@ -9,6 +9,11 @@ namespace Dorsavi.Xamarin.Forms.RemoteServer.Models
         public string Gender { get; set; }
         public int Age { get; set; }
 
-        public Lazy<List<DorsaviPetItemsDto>> Pets { get; set; } //Only load Pets when needed 
+        public List<DorsaviPetItemsDto> Pets { get; set; }
+        public DorsaviItemsDto()
+        {
+            if (Pets == null)
+                Pets = new List<DorsaviPetItemsDto>();
+        }
     }
 }

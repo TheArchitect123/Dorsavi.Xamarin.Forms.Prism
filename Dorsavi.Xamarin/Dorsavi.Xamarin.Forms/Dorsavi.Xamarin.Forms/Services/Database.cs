@@ -46,8 +46,8 @@ namespace Dorsavi.Xamarin.Forms.Services
 
         //Remove Items
         public void Delete(object objectToDelete) => _connection.Delete(objectToDelete);
-        public void Delete<T>(Guid id) => _connection.Delete<T>(id);
-        public void Delete<T>(IEnumerable<Guid> ids) => _connection.DeleteAll<T>();
+        public void Delete<T>(int id) => _connection.Delete<T>(id);
+        public void Delete<T>(IEnumerable<int> ids) => _connection.DeleteAll<T>();
         public void DeleteAll<T>() => _connection.DeleteAll<T>();
 
         public void DropTable<T>() => _connection.DropTable<T>();
