@@ -479,6 +479,15 @@
           "lib/netstandard2.0/Microsoft.Extensions.Primitives.dll": {}
         }
       },
+      "Newtonsoft.Json/12.0.3": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {}
+        }
+      },
       "Plugin.Security/1.0.2": {
         "type": "package",
         "compile": {
@@ -1688,12 +1697,14 @@
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
           "AutoMapper": "10.1.1",
-          "Dorsavi.Xamarin.Forms.HttpConsumers": "1.0.0",
           "Dorsavi.Xamarin.Forms.Prism.Extensions": "1.0.0",
+          "Dorsavi.Xamarin.Forms.RemoteServer.Models": "1.0.0",
+          "Dorsavi.Xamarin.Forms.RemoteServer.Resources": "1.0.0",
           "Dorsavi.Xamarin.Forms.Shared.Extensions": "1.0.0",
           "Microsoft.Extensions.Configuration": "5.0.0",
           "Microsoft.Extensions.Hosting": "5.0.0",
           "Microsoft.Extensions.Http.Polly": "5.0.1",
+          "Newtonsoft.Json": "12.0.3",
           "Prism.DryIoc.Forms": "8.0.0.1909",
           "XF.Material": "1.7.7",
           "Xamarin.Essentials": "1.6.1",
@@ -1708,16 +1719,6 @@
           "bin/placeholder/Dorsavi.Xamarin.Forms.dll": {}
         }
       },
-      "Dorsavi.Xamarin.Forms.HttpConsumers/1.0.0": {
-        "type": "project",
-        "framework": ".NETStandard,Version=v2.0",
-        "compile": {
-          "bin/placeholder/Dorsavi.Xamarin.Forms.HttpConsumers.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/Dorsavi.Xamarin.Forms.HttpConsumers.dll": {}
-        }
-      },
       "Dorsavi.Xamarin.Forms.Prism.Extensions/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
@@ -1726,6 +1727,26 @@
         },
         "runtime": {
           "bin/placeholder/Dorsavi.Xamarin.Forms.Prism.Extensions.dll": {}
+        }
+      },
+      "Dorsavi.Xamarin.Forms.RemoteServer.Models/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "compile": {
+          "bin/placeholder/Dorsavi.Xamarin.Forms.RemoteServer.Models.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Dorsavi.Xamarin.Forms.RemoteServer.Models.dll": {}
+        }
+      },
+      "Dorsavi.Xamarin.Forms.RemoteServer.Resources/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "compile": {
+          "bin/placeholder/Dorsavi.Xamarin.Forms.RemoteServer.Resources.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Dorsavi.Xamarin.Forms.RemoteServer.Resources.dll": {}
         }
       },
       "Dorsavi.Xamarin.Forms.Shared.Extensions/1.0.0": {
@@ -2493,6 +2514,37 @@
         "microsoft.extensions.primitives.nuspec",
         "useSharedDesignerContext.txt",
         "version.txt"
+      ]
+    },
+    "Newtonsoft.Json/12.0.3": {
+      "sha512": "6mgjfnRB4jKMlzHSl+VD+oUc1IebOZabkbyWj2RiTgWwYPPuaK1H97G1sHqGwPlS5npiF5Q0OrxN1wni2n5QWg==",
+      "type": "package",
+      "path": "newtonsoft.json/12.0.3",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.md",
+        "lib/net20/Newtonsoft.Json.dll",
+        "lib/net20/Newtonsoft.Json.xml",
+        "lib/net35/Newtonsoft.Json.dll",
+        "lib/net35/Newtonsoft.Json.xml",
+        "lib/net40/Newtonsoft.Json.dll",
+        "lib/net40/Newtonsoft.Json.xml",
+        "lib/net45/Newtonsoft.Json.dll",
+        "lib/net45/Newtonsoft.Json.xml",
+        "lib/netstandard1.0/Newtonsoft.Json.dll",
+        "lib/netstandard1.0/Newtonsoft.Json.xml",
+        "lib/netstandard1.3/Newtonsoft.Json.dll",
+        "lib/netstandard1.3/Newtonsoft.Json.xml",
+        "lib/netstandard2.0/Newtonsoft.Json.dll",
+        "lib/netstandard2.0/Newtonsoft.Json.xml",
+        "lib/portable-net40+sl5+win8+wp8+wpa81/Newtonsoft.Json.dll",
+        "lib/portable-net40+sl5+win8+wp8+wpa81/Newtonsoft.Json.xml",
+        "lib/portable-net45+win8+wp8+wpa81/Newtonsoft.Json.dll",
+        "lib/portable-net45+win8+wp8+wpa81/Newtonsoft.Json.xml",
+        "newtonsoft.json.12.0.3.nupkg.sha512",
+        "newtonsoft.json.nuspec",
+        "packageIcon.png"
       ]
     },
     "Plugin.Security/1.0.2": {
@@ -4316,15 +4368,20 @@
       "path": "../Dorsavi.Xamarin.Forms/Dorsavi.Xamarin.Forms.csproj",
       "msbuildProject": "../Dorsavi.Xamarin.Forms/Dorsavi.Xamarin.Forms.csproj"
     },
-    "Dorsavi.Xamarin.Forms.HttpConsumers/1.0.0": {
-      "type": "project",
-      "path": "../../Dorsavi.Xamarin.Forms.HttpConsumers/Dorsavi.Xamarin.Forms.HttpConsumers.csproj",
-      "msbuildProject": "../../Dorsavi.Xamarin.Forms.HttpConsumers/Dorsavi.Xamarin.Forms.HttpConsumers.csproj"
-    },
     "Dorsavi.Xamarin.Forms.Prism.Extensions/1.0.0": {
       "type": "project",
       "path": "../../Dorsavi.Xamarin.Forms.Prism.Extensions/Dorsavi.Xamarin.Forms.Prism.Extensions.csproj",
       "msbuildProject": "../../Dorsavi.Xamarin.Forms.Prism.Extensions/Dorsavi.Xamarin.Forms.Prism.Extensions.csproj"
+    },
+    "Dorsavi.Xamarin.Forms.RemoteServer.Models/1.0.0": {
+      "type": "project",
+      "path": "../../Dorsavi.Xamarin.Forms.RemoteServer.Models/Dorsavi.Xamarin.Forms.RemoteServer.Models.csproj",
+      "msbuildProject": "../../Dorsavi.Xamarin.Forms.RemoteServer.Models/Dorsavi.Xamarin.Forms.RemoteServer.Models.csproj"
+    },
+    "Dorsavi.Xamarin.Forms.RemoteServer.Resources/1.0.0": {
+      "type": "project",
+      "path": "../../Dorsavi.Xamarin.Forms.RemoteServer.Resources/Dorsavi.Xamarin.Forms.RemoteServer.Resources.csproj",
+      "msbuildProject": "../../Dorsavi.Xamarin.Forms.RemoteServer.Resources/Dorsavi.Xamarin.Forms.RemoteServer.Resources.csproj"
     },
     "Dorsavi.Xamarin.Forms.Shared.Extensions/1.0.0": {
       "type": "project",

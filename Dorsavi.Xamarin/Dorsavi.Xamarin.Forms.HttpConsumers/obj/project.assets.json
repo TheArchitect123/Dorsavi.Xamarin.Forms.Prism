@@ -11,6 +11,15 @@
           "lib/netstandard1.0/_._": {}
         }
       },
+      "modernhttpclient-updated/3.4.3": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/ModernHttpClient.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/ModernHttpClient.dll": {}
+        }
+      },
       "NETStandard.Library/2.0.3": {
         "type": "package",
         "dependencies": {
@@ -42,6 +51,23 @@
         "microsoft.netcore.platforms.1.1.0.nupkg.sha512",
         "microsoft.netcore.platforms.nuspec",
         "runtime.json"
+      ]
+    },
+    "modernhttpclient-updated/3.4.3": {
+      "sha512": "uWb0n2JSl239EXrzwumhvRjstKQhTwdSdm8LKLvMGfac96KB4Op/xyx6Pcc33preuKnOw7p68UtihnBjQx6XCw==",
+      "type": "package",
+      "path": "modernhttpclient-updated/3.4.3",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/MonoAndroid/ModernHttpClient.dll",
+        "lib/UAP10/ModernHttpClient.dll",
+        "lib/UAP10/ModernHttpClient.pri",
+        "lib/Xamarin.iOS10/ModernHttpClient.dll",
+        "lib/netstandard2.0/ModernHttpClient.dll",
+        "lib/portable-net45+win8+wpa81/ModernHttpClient.dll",
+        "modernhttpclient-updated.3.4.3.nupkg.sha512",
+        "modernhttpclient-updated.nuspec"
       ]
     },
     "NETStandard.Library/2.0.3": {
@@ -176,7 +202,8 @@
   },
   "projectFileDependencyGroups": {
     ".NETStandard,Version=v2.0": [
-      "NETStandard.Library >= 2.0.3"
+      "NETStandard.Library >= 2.0.3",
+      "modernhttpclient-updated >= 3.4.3"
     ]
   },
   "packageFolders": {
@@ -228,6 +255,10 @@
             "target": "Package",
             "version": "[2.0.3, )",
             "autoReferenced": true
+          },
+          "modernhttpclient-updated": {
+            "target": "Package",
+            "version": "[3.4.3, )"
           }
         },
         "imports": [

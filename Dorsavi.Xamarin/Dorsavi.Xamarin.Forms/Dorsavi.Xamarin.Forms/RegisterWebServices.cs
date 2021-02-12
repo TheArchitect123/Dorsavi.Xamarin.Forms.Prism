@@ -1,5 +1,4 @@
-﻿using Dorsavi.Xamarin.Forms.Shared.Extensions;
-using Microsoft.Extensions.Configuration;
+﻿using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Polly;
@@ -10,6 +9,9 @@ using System.Net.Sockets;
 
 namespace Dorsavi.Xamarin.Forms
 {
+    using Dorsavi.Xamarin.Forms.Constants;
+    using Dorsavi.Xamarin.Forms.Extensions;
+
     /// <summary>
     /// Use this class to register an IHTTPClientFactory, which will be integrated with Polly to manage 
     /// </summary>
@@ -32,7 +34,7 @@ namespace Dorsavi.Xamarin.Forms
 
         private static bool CatchSocketException(SocketException socketIssue)
         {
-            socketIssue.LogException(); //If a failure occurs to connect to the remote server make sure to log to the event viewer 
+            socketIssue.HandleException(); //If a failure occurs to connect to the remote server make sure to log to the event viewer 
             return true;
         }
         private static IAsyncPolicy<HttpResponseMessage> GetPollyRetryPolicies()
@@ -46,7 +48,7 @@ namespace Dorsavi.Xamarin.Forms
 
         public static void InitializeHttpServices(IServiceCollection services)
         {
-            services.AddHttpClient("CommonHttpWebClient", client =>
+            services.AddHttpClient(HttpClientNames.CommonHttpClientName, client =>
             {
                 var config = GetService<IConfiguration>();
                 client.Timeout = TimeSpan.FromMinutes(2);

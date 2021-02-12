@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "zKcx5Tj01l5P3nciPXQiceae2c+S6gy1w39JCtxKHsVxUPYPI1V5rhgJm6I/ec/710xEAGBZhMrwjNOfflv3Sw==",
+  "success": true,
+  "projectFilePath": "C:\\Commercial\\Dorsavi.Xamarin.Forms.Prism\\Dorsavi.Xamarin\\Dorsavi.Xamarin.Forms.RemoteServer.Models\\Dorsavi.Xamarin.Forms.RemoteServer.Models.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Dan Gerchcovich\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\Dan Gerchcovich\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}

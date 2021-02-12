@@ -49,6 +49,10 @@
               "target": "Package",
               "version": "[2.0.3, )",
               "autoReferenced": true
+            },
+            "modernhttpclient-updated": {
+              "target": "Package",
+              "version": "[3.4.3, )"
             }
           },
           "imports": [

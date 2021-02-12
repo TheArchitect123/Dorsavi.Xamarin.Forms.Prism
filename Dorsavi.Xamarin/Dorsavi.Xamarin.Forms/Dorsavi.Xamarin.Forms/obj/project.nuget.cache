@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "lr7CnTpSdVC8kkFdQMCDaiQnkBfED9T5prcSRxWIOpA/LxRgOC4e0Y9gT/8D/Af1MviWw0YuaN+I5e+rwXAYzQ==",
+  "dgSpecHash": "Mpd677R8lSGbLUdvpJ9hs9JTyZwPanMswN7XRZ7K97uUP4MSpn99qQRrWymjsmecSOzF5nYGK8/hhSsVpMLo0Q==",
   "success": true,
   "projectFilePath": "C:\\Commercial\\Dorsavi.Xamarin.Forms.Prism\\Dorsavi.Xamarin\\Dorsavi.Xamarin.Forms\\Dorsavi.Xamarin.Forms\\Dorsavi.Xamarin.Forms.csproj",
   "expectedPackageFiles": [
@@ -39,6 +39,7 @@
     "C:\\Users\\Dan Gerchcovich\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Users\\Dan Gerchcovich\\.nuget\\packages\\microsoft.netcore.targets\\1.1.0\\microsoft.netcore.targets.1.1.0.nupkg.sha512",
     "C:\\Users\\Dan Gerchcovich\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
+    "C:\\Users\\Dan Gerchcovich\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512",
     "C:\\Users\\Dan Gerchcovich\\.nuget\\packages\\plugin.security\\1.0.2\\plugin.security.1.0.2.nupkg.sha512",
     "C:\\Users\\Dan Gerchcovich\\.nuget\\packages\\polly\\7.1.0\\polly.7.1.0.nupkg.sha512",
     "C:\\Users\\Dan Gerchcovich\\.nuget\\packages\\polly.extensions.http\\3.0.0\\polly.extensions.http.3.0.0.nupkg.sha512",

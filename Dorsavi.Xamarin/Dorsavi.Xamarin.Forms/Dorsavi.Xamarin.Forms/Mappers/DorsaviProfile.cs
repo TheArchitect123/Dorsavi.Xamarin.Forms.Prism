@@ -1,9 +1,10 @@
 ﻿using AutoMapper;
-using Dorsavi.Xamarin.Forms.HttpConsumers.Dto;
-using Dorsavi.Xamarin.Forms.Models;
 
 namespace Dorsavi.Xamarin.Forms.Mappers
 {
+    using Dorsavi.Xamarin.Forms.Models;
+    using Dorsavi.Xamarin.Forms.RemoteServer.Models;
+ 
     /// <summary>
     /// Configure AutoMapper to perform linq projection & abstract mapping logic away from the main source code
     /// </summary>

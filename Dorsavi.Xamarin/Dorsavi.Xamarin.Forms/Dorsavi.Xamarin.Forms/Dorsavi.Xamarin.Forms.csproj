@@ -9,6 +9,7 @@
     <PackageReference Include="Microsoft.Extensions.Configuration" Version="5.0.0" />
     <PackageReference Include="Microsoft.Extensions.Hosting" Version="5.0.0" />
     <PackageReference Include="Microsoft.Extensions.Http.Polly" Version="5.0.1" />
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
     <PackageReference Include="sqlite-net-pcl" Version="1.7.335" />
     <PackageReference Include="StyleCop.Analyzers" Version="1.1.118">
       <PrivateAssets>all</PrivateAssets>
@@ -22,8 +23,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\Dorsavi.Xamarin.Forms.HttpConsumers\Dorsavi.Xamarin.Forms.HttpConsumers.csproj" />
     <ProjectReference Include="..\..\Dorsavi.Xamarin.Forms.Prism.Extensions\Dorsavi.Xamarin.Forms.Prism.Extensions.csproj" />
+    <ProjectReference Include="..\..\Dorsavi.Xamarin.Forms.RemoteServer.Models\Dorsavi.Xamarin.Forms.RemoteServer.Models.csproj" />
+    <ProjectReference Include="..\..\Dorsavi.Xamarin.Forms.RemoteServer.Resources\Dorsavi.Xamarin.Forms.RemoteServer.Resources.csproj" />
     <ProjectReference Include="..\..\Dorsavi.Xamarin.Forms.Shared.Extensions\Dorsavi.Xamarin.Forms.Shared.Extensions.csproj" />
   </ItemGroup>
 

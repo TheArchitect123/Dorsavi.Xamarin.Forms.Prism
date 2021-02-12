@@ -7,6 +7,7 @@ using Prism.Ioc;
 
 namespace Dorsavi.Xamarin.Forms
 {
+    using Dorsavi.Xamarin.Forms.Constants;
     using Dorsavi.Xamarin.Forms.ViewModels;
     using Dorsavi.Xamarin.Forms.Views;
 
@@ -21,7 +22,7 @@ namespace Dorsavi.Xamarin.Forms
         {
             InitializeComponent();
 
-            await NavigationService.NavigateAsync("NavigationPage/MainPage");
+            await NavigationService.NavigateAsync(NavigationRoutes.DefaultRoute);
         }
 
         protected override void RegisterTypes(IContainerRegistry containerRegistry)
