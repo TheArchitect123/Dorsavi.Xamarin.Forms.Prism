@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Dorsavi.Xamarin.Forms.Services.HttpClients
 {
-    public class CommonHttpClientConsumer
+    public sealed class CommonHttpClientConsumer
     {
         private readonly HttpClient httpClient = RegisterWebServices.GetService<IHttpClientFactory>().CreateClient(nameof(CommonHttpClientConsumer));
 
@@ -16,16 +16,16 @@ namespace Dorsavi.Xamarin.Forms.Services.HttpClients
             IEnumerable<DorsaviItemsDto> responseResults = null;
             using (var request = new HttpRequestMessage(HttpMethod.Get, AzureDorsaviResources.AzureDorsaviTestApiDirectory))
             {
-                var response = this.httpClient.SendAsync(request, HttpCompletionOption.ResponseContentRead).Result;
+                var response = await this.httpClient.SendAsync(request, HttpCompletionOption.ResponseContentRead);
                 if (response != null)
                 {
-                    var result = response.Content.ReadAsStringAsync().Result;
+                    var result = await response.Content.ReadAsStringAsync();
                     if (!string.IsNullOrWhiteSpace(result))
                         responseResults = JsonConvert.DeserializeObject<IEnumerable<DorsaviItemsDto>>(result);
                 }
-            }
 
-            return responseResults;
+                return responseResults;
+            }
         }
     }
 }

@@ -1,0 +1,14 @@
+﻿<ResourceDictionary
+    xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+
+    <!--Default Page Strings-->
+    <x:Int64 x:Key="DefaultPage.WelcomeMessageTitle.FontSize">18</x:Int64>
+    <x:Int64 x:Key="DefaultPage.WelcomeMessage.FontSize">14</x:Int64>
+    <x:Int64 x:Key="DefaultPage.BeginBtn.FontSize">16</x:Int64>
+
+    <!--Settings Page Strings-->
+    <x:Int64 x:Key="SettingsPage.WelcomeMessageTitle.FontSize">18</x:Int64>
+    <x:Int64 x:Key="SettingsPage.WelcomeMessage.FontSize">16</x:Int64>
+    
+</ResourceDictionary>

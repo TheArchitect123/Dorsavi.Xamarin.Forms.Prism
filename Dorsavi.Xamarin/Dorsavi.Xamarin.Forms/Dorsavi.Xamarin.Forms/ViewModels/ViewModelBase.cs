@@ -3,40 +3,20 @@ using Prism.Navigation;
 
 namespace Dorsavi.Xamarin.Forms.ViewModels
 {
-    public abstract class ViewModelBase : BindableBase, IInitialize, INavigationAware, IDestructible
+    public abstract class ViewModelBase : BindableBase
     {
         protected INavigationService NavigationService { get; private set; }
 
-        private string _title;
-        public string Title
+        private string _PageTitle;
+        public string PageTitle
         {
-            get { return _title; }
-            set { SetProperty(ref _title, value); }
+            get { return this._PageTitle; }
+            set { this.SetProperty(ref this._PageTitle, value); }
         }
 
         public ViewModelBase(INavigationService navigationService)
         {
-            NavigationService = navigationService;
-        }
-
-        public virtual void Initialize(INavigationParameters parameters)
-        {
-
-        }
-
-        public virtual void OnNavigatedFrom(INavigationParameters parameters)
-        {
-
-        }
-
-        public virtual void OnNavigatedTo(INavigationParameters parameters)
-        {
-
-        }
-
-        public virtual void Destroy()
-        {
-
+            this.NavigationService = navigationService;
         }
     }
 }

@@ -1,0 +1,23 @@
+﻿<ResourceDictionary
+    xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+
+    <OnPlatform x:TypeArguments="x:String" x:Key="RoboticoThin">
+        <On Platform="Android" Value="Roboto-Thin.ttf#Roboto-Thin" />
+        <On Platform="UWP" Value="/Fonts/Roboto-Thin.ttf#Roboto-Thin" />
+        <On Platform="iOS" Value="Roboto-Thin" />
+    </OnPlatform>
+
+    <OnPlatform x:TypeArguments="x:String" x:Key="RoboticoLight">
+        <On Platform="Android" Value="Roboto-Light.ttf#Roboto-Light" />
+        <On Platform="UWP" Value="/Fonts/Roboto-Light.ttf#Roboto-Light" />
+        <On Platform="iOS" Value="Roboto-Light" />
+    </OnPlatform>
+
+    <OnPlatform x:TypeArguments="x:String" x:Key="RoboticoRegular">
+        <On Platform="Android" Value="Roboto-Regular.ttf#Roboto-Regular" />
+        <On Platform="UWP" Value="/Fonts/Roboto-Regular.ttf#Roboto-Regular" />
+        <On Platform="iOS" Value="Roboto-Regular" />
+    </OnPlatform>
+
+</ResourceDictionary>

@@ -8,12 +8,13 @@ namespace Dorsavi.Xamarin.Forms
     using Dorsavi.Xamarin.Forms.Constants;
     using Dorsavi.Xamarin.Forms.Mappers;
     using Dorsavi.Xamarin.Forms.Services;
+    using Dorsavi.Xamarin.Forms.Services.HttpClients;
     using Dorsavi.Xamarin.Forms.Shared.Extensions;
 
     /// <summary>
     /// Register all services other than view models into the iOC Container (AutoMapper, HttpConsumers & Client Factory, etc)
     /// </summary>
-    public static class RegisterInternalServices
+    internal static class RegisterInternalServices
     {
         public static void RegisterHttpClientServices()
         {

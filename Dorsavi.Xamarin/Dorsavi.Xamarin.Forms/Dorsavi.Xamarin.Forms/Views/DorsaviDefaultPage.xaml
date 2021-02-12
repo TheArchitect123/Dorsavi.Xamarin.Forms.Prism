@@ -2,7 +2,37 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:prism="http://prismlibrary.com"
-             prism:ViewModelLocator.AutowireViewModel="True"
+             prism:ViewModelLocator.AutowireViewModel="True"             
+                
+             NavigationPage.HasNavigationBar="False"
              x:Class="Dorsavi.Xamarin.Forms.Views.DorsaviDefaultPage">
-  
+
+    <Grid>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="100"/>
+            <!--BeginBtn Row-->
+            <RowDefinition Height="20"/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <StackLayout Orientation="Vertical" Grid.Row="1">
+            <Label Text="{StaticResource Key=DefaultPage.WelcomeMessageTitle}" HorizontalTextAlignment="Center" FontFamily="{StaticResource Key=RoboticoRegular}" 
+               FontSize="{StaticResource Key=DefaultPage.WelcomeMessageTitle.FontSize}"/>
+
+            <Label Text="{StaticResource Key=DefaultPage.WelcomeMessage}" HorizontalTextAlignment="Center" FontFamily="{StaticResource Key=RoboticoRegular}" 
+               FontSize="{StaticResource Key=DefaultPage.WelcomeMessage.FontSize}"/>
+
+        </StackLayout>
+
+
+        <Button Command="{Binding }" Grid.Row="3" HorizontalOptions="CenterAndExpand"/>
+
+    </Grid>
 </ContentPage>

@@ -15,7 +15,7 @@ namespace Dorsavi.Xamarin.Forms
     /// <summary>
     /// Use this class to register an IHTTPClientFactory, which will be integrated with Polly to manage 
     /// </summary>
-    public class RegisterWebServices
+    internal class RegisterWebServices
     {
         private static IServiceProvider _serviceProvider;
         public static void InitializeClientFactory()
@@ -37,6 +37,7 @@ namespace Dorsavi.Xamarin.Forms
             socketIssue.HandleException(); //If a failure occurs to connect to the remote server make sure to log to the event viewer 
             return true;
         }
+
         private static IAsyncPolicy<HttpResponseMessage> GetPollyRetryPolicies()
         {
             return HttpPolicyExtensions

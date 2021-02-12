@@ -1,0 +1,11 @@
+﻿<ResourceDictionary xmlns="http://xamarin.com/schemas/2014/forms"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+    <!--Default Page Strings-->
+    <x:String x:Key="DefaultPage.WelcomeMessageTitle">WELCOME</x:String>
+    <x:String x:Key="DefaultPage.WelcomeMessage">This is a test app developed by</x:String>
+    <x:String x:Key="DefaultPage.BeginBtn">BEGIN</x:String>
+
+    <!--Settings Page Strings-->
+    <x:String x:Key="SettingsPage.WelcomeMessageTitle">MISC</x:String>
+    <x:String x:Key="SettingsPage.WelcomeMessage">About Us</x:String>
+</ResourceDictionary>

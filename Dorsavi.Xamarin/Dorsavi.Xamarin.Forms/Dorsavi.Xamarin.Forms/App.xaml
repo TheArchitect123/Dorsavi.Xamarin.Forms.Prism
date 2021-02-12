@@ -3,9 +3,13 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:prism="http://prismlibrary.com"
              x:Class="Dorsavi.Xamarin.Forms.App">
-  <Application.Resources>
+    <Application.Resources>
 
-    <!-- Application resource dictionary -->
-
-  </Application.Resources>
+        <!--Merged Resource Dictionaries-->
+        <ResourceDictionary Source="/ResourceDictionaries/Colours.xaml"/>
+        <ResourceDictionary Source="/ResourceDictionaries/Fonts.xaml"/>
+        <ResourceDictionary Source="/ResourceDictionaries/ImageFileSources.xaml"/>
+        <ResourceDictionary Source="/ResourceDictionaries/Strings.xaml"/>
+        <ResourceDictionary Source="/ResourceDictionaries/FontSizes.xaml"/>
+    </Application.Resources>
 </prism:PrismApplication>

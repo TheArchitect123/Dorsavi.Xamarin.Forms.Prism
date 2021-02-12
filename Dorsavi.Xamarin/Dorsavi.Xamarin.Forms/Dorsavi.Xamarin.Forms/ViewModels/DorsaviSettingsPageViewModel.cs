@@ -1,4 +1,5 @@
-﻿using Prism.Commands;
+﻿using Dorsavi.Xamarin.Forms.Constants;
+using Prism.Commands;
 using Prism.Mvvm;
 using Prism.Navigation;
 using System;
@@ -11,7 +12,7 @@ namespace Dorsavi.Xamarin.Forms.ViewModels
     {
         public DorsaviSettingsPageViewModel(INavigationService navigation) : base(navigation)
         {
-
+            this.PageTitle = PageNames.SettingsPageName;
         }
     }
 }

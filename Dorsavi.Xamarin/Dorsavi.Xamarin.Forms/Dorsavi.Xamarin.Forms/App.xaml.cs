@@ -27,11 +27,17 @@ namespace Dorsavi.Xamarin.Forms
 
         protected override void RegisterTypes(IContainerRegistry containerRegistry)
         {
+            //Register ViewModels 
             containerRegistry.RegisterSingleton<IAppInfo, AppInfoImplementation>();
             containerRegistry.RegisterForNavigation<NavigationPage>();
             containerRegistry.RegisterForNavigation<DorsaviDefaultPage, DorsaviDefaultPageViewModel>();
             containerRegistry.RegisterForNavigation<DorsaviHomePage, DorsaviHomePageViewModel>();
             containerRegistry.RegisterForNavigation<DorsaviSettingsPage, DorsaviSettingsPageViewModel>();
+
+            //Register Internal Services 
+            RegisterInternalServices.RegisterHttpClientServices();
+            RegisterInternalServices.RegisterProfileMappingServices(ref containerRegistry);
+            RegisterInternalServices.RegisterSqliteEncryption(ref containerRegistry);
         }
     }
 }

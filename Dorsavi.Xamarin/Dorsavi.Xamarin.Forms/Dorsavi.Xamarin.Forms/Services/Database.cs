@@ -1,4 +1,7 @@
-﻿using SQLite;
+﻿using Dorsavi.Xamarin.Forms.Constants;
+using Dorsavi.Xamarin.Forms.Models;
+using Prism.Navigation;
+using SQLite;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,9 +19,25 @@ namespace Dorsavi.Xamarin.Forms.Services
             if (_connection == null)
                 _connection = connection;
 
-            _connection.BusyTimeout = new TimeSpan(1, 0, 0);
+            ConfigureSQLiteConnection();
+
+            //Create the Tables based on the Schema on Each Entity
+            GenerateTablesOnInitialMigration();
         }
 
+        private void ConfigureSQLiteConnection()
+        {
+            _connection.BusyTimeout = new TimeSpan(1, 0, 0); //Prevent Deadlocks by increasing the timeout
+        }
+
+        private void GenerateTablesOnInitialMigration()
+        {
+            _connection.CreateTable<DorsaviItems>();
+            _connection.CreateTable<DorsaviPetItems>();
+            _connection.CreateTable<LogItems>();
+        }
+
+        #region Api (Business Logic)
         public void BeginTransaction() => _connection.BeginTransaction();
         public void CloseDatabase() => _connection.Close();
 
@@ -39,7 +58,6 @@ namespace Dorsavi.Xamarin.Forms.Services
         public IEnumerable<PersistentType> GetAll<PersistentType>(string query) where PersistentType : class, new() => _connection.CreateCommand(query).ExecuteQuery<PersistentType>().AsEnumerable();
         public IEnumerable<T> GetItems<T>(Func<T, bool> condition) where T : class, new()
         {
-
             return null;
         }
 
@@ -68,21 +86,6 @@ namespace Dorsavi.Xamarin.Forms.Services
             return null;
         }
 
-        public IEnumerable<PersistentType> GetAll<PersistentType>() where PersistentType : class, new()
-        {
-            throw new NotImplementedException();
-        }
-
-        public void InsertOrReplace<T>(T objectToInsert) => _connection.InsertOrReplace(objectToInsert);
-
-        public IEnumerable<PersistentType> Get<PersistentType>(string queryStatement, params object[] queryParameter)
-        {
-            throw new NotImplementedException();
-        }
-
-        public Task<IEnumerable<PersistentType>> GetAsync<PersistentType>(string query)
-        {
-            throw new NotImplementedException();
-        }
+        #endregion
     }
 }

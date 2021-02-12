@@ -16,12 +16,12 @@ namespace Dorsavi.Xamarin.Forms.Mappers
             InitializeFromDto();
         }
 
-        public void InitializeToDto()
+        private void InitializeToDto()
         {
             this.CreateMap<DorsaviItems, DorsaviItemsDto>();
         }
 
-        public void InitializeFromDto()
+        private void InitializeFromDto()
         {
             this.CreateMap<DorsaviItemsDto, DorsaviItems>();
         }
