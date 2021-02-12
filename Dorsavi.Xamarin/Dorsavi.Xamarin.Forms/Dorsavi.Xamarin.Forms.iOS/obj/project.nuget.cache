@@ -1,0 +1,22 @@
+{
+  "version": 2,
+  "dgSpecHash": "u7AYUP26BW6M7+Ufrra7rjZl5buvr6y5EXskv5CbLRiKlNZt0NZtU31kHHojC367ASDjkZW3UafWtEFzi0GfPA==",
+  "success": true,
+  "projectFilePath": "C:\\Commercial\\Dorsavi.Xamarin.Forms.Prism\\Dorsavi.Xamarin\\Dorsavi.Xamarin.Forms\\Dorsavi.Xamarin.Forms.iOS\\Dorsavi.Xamarin.Forms.iOS.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Dan Gerchcovich\\.nuget\\packages\\com.airbnb.ios.lottie\\2.5.13\\com.airbnb.ios.lottie.2.5.13.nupkg.sha512",
+    "C:\\Users\\Dan Gerchcovich\\.nuget\\packages\\com.airbnb.xamarin.forms.lottie\\4.0.8\\com.airbnb.xamarin.forms.lottie.4.0.8.nupkg.sha512",
+    "C:\\Users\\Dan Gerchcovich\\.nuget\\packages\\dryioc.dll\\4.5.0\\dryioc.dll.4.5.0.nupkg.sha512",
+    "C:\\Users\\Dan Gerchcovich\\.nuget\\packages\\prism.core\\8.0.0.1909\\prism.core.8.0.0.1909.nupkg.sha512",
+    "C:\\Users\\Dan Gerchcovich\\.nuget\\packages\\prism.dryioc.forms\\8.0.0.1909\\prism.dryioc.forms.8.0.0.1909.nupkg.sha512",
+    "C:\\Users\\Dan Gerchcovich\\.nuget\\packages\\prism.forms\\8.0.0.1909\\prism.forms.8.0.0.1909.nupkg.sha512",
+    "C:\\Users\\Dan Gerchcovich\\.nuget\\packages\\rg.plugins.popup\\2.0.0.8\\rg.plugins.popup.2.0.0.8.nupkg.sha512",
+    "C:\\Users\\Dan Gerchcovich\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
+    "C:\\Users\\Dan Gerchcovich\\.nuget\\packages\\system.reflection.emit.lightweight\\4.3.0\\system.reflection.emit.lightweight.4.3.0.nupkg.sha512",
+    "C:\\Users\\Dan Gerchcovich\\.nuget\\packages\\xamarin.essentials\\1.6.1\\xamarin.essentials.1.6.1.nupkg.sha512",
+    "C:\\Users\\Dan Gerchcovich\\.nuget\\packages\\xamarin.essentials.interfaces\\1.5.3.2\\xamarin.essentials.interfaces.1.5.3.2.nupkg.sha512",
+    "C:\\Users\\Dan Gerchcovich\\.nuget\\packages\\xamarin.forms\\4.8.0.1364\\xamarin.forms.4.8.0.1364.nupkg.sha512",
+    "C:\\Users\\Dan Gerchcovich\\.nuget\\packages\\xf.material\\1.7.7\\xf.material.1.7.7.nupkg.sha512"
+  ],
+  "logs": []
+}
