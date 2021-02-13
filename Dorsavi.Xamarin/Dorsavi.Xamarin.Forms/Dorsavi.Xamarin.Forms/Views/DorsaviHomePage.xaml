@@ -6,6 +6,14 @@
              Title="{Binding PageTitle, Mode=OneWay}"
              x:Class="Dorsavi.Xamarin.Forms.Views.DorsaviHomePage">
 
+    <ContentPage.ToolbarItems>
+        <ToolbarItem
+            Command="{Binding IBeginNavigationToSettingsPage, Mode=OneWay}"
+            Text="Settings"
+                 Order="Primary"
+                 Priority="0" />
+    </ContentPage.ToolbarItems>
+
     <ListView IsPullToRefreshEnabled="True" RefreshCommand="{Binding RefreshItemsFromRemoteServerCommand, Mode=OneWay}"
               IsRefreshing="{Binding IsCollectionRefreshing, Mode=OneWay}" ItemsSource="{Binding FetchedItems, Mode=OneWay}">
         <ListView.ItemTemplate>
@@ -14,7 +22,8 @@
                     <StackLayout Orientation="Vertical">
                         <Label Text="{Binding Name, Mode=OneWay}" TextColor="Black" FontSize="14" />
                         <Label Text="{Binding Gender, Mode=OneWay}"  TextColor="Black" FontSize="14"/>
-                    </StackLayout> 
+                        <Label Text="{Binding Age, Mode=OneWay}"  TextColor="Black" FontSize="14"/>
+                    </StackLayout>
                 </ViewCell>
             </DataTemplate>
         </ListView.ItemTemplate>

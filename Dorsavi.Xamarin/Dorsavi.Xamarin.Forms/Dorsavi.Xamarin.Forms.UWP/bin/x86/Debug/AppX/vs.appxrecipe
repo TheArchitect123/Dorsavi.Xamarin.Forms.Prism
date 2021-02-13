@@ -30,13 +30,13 @@
     <AppXManifest Include="C:\Commercial\Dorsavi.Xamarin.Forms.Prism\Dorsavi.Xamarin\Dorsavi.Xamarin.Forms\Dorsavi.Xamarin.Forms.UWP\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-02-13T04:55:43.818</Modified>
+      <Modified>2021-02-13T05:28:57.968</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Commercial\Dorsavi.Xamarin.Forms.Prism\Dorsavi.Xamarin\Dorsavi.Xamarin.Forms\Dorsavi.Xamarin.Forms.UWP\bin\x86\Debug\Dorsavi.Xamarin.Forms.UWP.exe">
       <PackagePath>entrypoint\Dorsavi.Xamarin.Forms.UWP.exe</PackagePath>
-      <Modified>2021-02-13T04:55:41.737</Modified>
+      <Modified>2021-02-13T05:28:56.511</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Dan Gerchcovich\.nuget\packages\acr.userdialogs\7.1.0.475\lib\uap10.0.16299\Acr.UserDialogs.dll">
       <PackagePath>Acr.UserDialogs.dll</PackagePath>
@@ -292,7 +292,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Commercial\Dorsavi.Xamarin.Forms.Prism\Dorsavi.Xamarin\Dorsavi.Xamarin.Forms\Dorsavi.Xamarin.Forms\bin\Debug\netstandard2.0\Dorsavi.Xamarin.Forms.dll">
       <PackagePath>Dorsavi.Xamarin.Forms.dll</PackagePath>
-      <Modified>2021-02-13T04:55:32.182</Modified>
+      <Modified>2021-02-13T05:28:49.339</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Commercial\Dorsavi.Xamarin.Forms.Prism\Dorsavi.Xamarin\Dorsavi.Xamarin.Forms.Prism.Extensions\bin\Debug\netstandard2.0\Dorsavi.Xamarin.Forms.Prism.Extensions.dll">
       <PackagePath>Dorsavi.Xamarin.Forms.Prism.Extensions.dll</PackagePath>
@@ -334,9 +334,9 @@
       <PackagePath>Coding4Fun.Toolkit.Controls\Themes\Generic.xbf</PackagePath>
       <Modified>2016-05-12T22:21:28.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Commercial\Dorsavi.Xamarin.Forms.Prism\Dorsavi.Xamarin\Dorsavi.Xamarin.Forms\Dorsavi.Xamarin.Forms.UWP\Properties\Default.rd.xml">
-      <PackagePath>Properties\Default.rd.xml</PackagePath>
-      <Modified>2021-02-12T06:56:06.250</Modified>
+    <AppxPackagedFile Include="C:\Commercial\Dorsavi.Xamarin.Forms.Prism\Dorsavi.Xamarin\Dorsavi.Xamarin.Forms\Dorsavi.Xamarin.Forms.UWP\Assets\ic_account_circle_black_36dp.png">
+      <PackagePath>Assets\ic_account_circle_black_36dp.png</PackagePath>
+      <Modified>2021-02-13T05:15:20.925</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Commercial\Dorsavi.Xamarin.Forms.Prism\Dorsavi.Xamarin\Dorsavi.Xamarin.Forms\Dorsavi.Xamarin.Forms.UWP\Assets\LockScreenLogo.scale-200.png">
       <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>
@@ -371,6 +371,10 @@
       <PackagePath>Assets\Wide310x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2021-02-12T06:56:06.201</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Commercial\Dorsavi.Xamarin.Forms.Prism\Dorsavi.Xamarin\Dorsavi.Xamarin.Forms\Dorsavi.Xamarin.Forms.UWP\Properties\Default.rd.xml">
+      <PackagePath>Properties\Default.rd.xml</PackagePath>
+      <Modified>2021-02-12T06:56:06.250</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Commercial\Dorsavi.Xamarin.Forms.Prism\Dorsavi.Xamarin\Dorsavi.Xamarin.Forms\Dorsavi.Xamarin.Forms.UWP\Fonts\Roboto-Black.ttf">
       <PackagePath>Fonts\Roboto-Black.ttf</PackagePath>
@@ -426,11 +430,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Commercial\Dorsavi.Xamarin.Forms.Prism\Dorsavi.Xamarin\Dorsavi.Xamarin.Forms\Dorsavi.Xamarin.Forms.UWP\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2021-02-13T04:55:41.615</Modified>
+      <Modified>2021-02-13T05:28:56.429</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Commercial\Dorsavi.Xamarin.Forms.Prism\Dorsavi.Xamarin\Dorsavi.Xamarin.Forms\Dorsavi.Xamarin.Forms.UWP\bin\x86\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
-      <Modified>2021-02-13T04:55:41.616</Modified>
+      <Modified>2021-02-13T05:28:56.429</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.UniversalCRT.Debug\10.0.18362.0\\redist\Debug\x86\ucrtbased.dll">
       <PackagePath>ucrtbased.dll</PackagePath>
@@ -446,11 +450,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Commercial\Dorsavi.Xamarin.Forms.Prism\Dorsavi.Xamarin\Dorsavi.Xamarin.Forms\Dorsavi.Xamarin.Forms.UWP\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2021-02-13T04:02:42.434</Modified>
+      <Modified>2021-02-13T05:17:42.258</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Commercial\Dorsavi.Xamarin.Forms.Prism\Dorsavi.Xamarin\Dorsavi.Xamarin.Forms\Dorsavi.Xamarin.Forms.UWP\bin\x86\Debug\Core\Dorsavi.Xamarin.Forms.UWP.exe">
       <PackagePath>Dorsavi.Xamarin.Forms.UWP.exe</PackagePath>
-      <Modified>2021-02-13T04:55:43.812</Modified>
+      <Modified>2021-02-13T05:28:57.963</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

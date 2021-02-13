@@ -97,13 +97,8 @@ namespace Dorsavi.Xamarin.Forms.ViewModels
             {
                 MainThread.BeginInvokeOnMainThread(() =>
                 {
-                    this.FetchedItems.Add(new DorsaviListItemViewModel()
-                    {
-                        Name = fetchedResultsFromStorage[0].Key.Name,
-                        Gender = fetchedResultsFromStorage[0].Key.Gender
-                    });
-
-                    this.RaisePropertyChanged(); //Force Refresh the ViewModel
+                    foreach (var item in fetchedResultsFromStorage)
+                        this.FetchedItems.Add(this.mappingServiceImplementation.Map<DorsaviItems, DorsaviListItemViewModel>(item.Key));
                 });
             }
         }

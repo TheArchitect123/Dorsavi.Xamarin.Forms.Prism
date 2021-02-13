@@ -6,4 +6,21 @@
              Title="{Binding PageTitle, Mode=OneWay}"
              x:Class="Dorsavi.Xamarin.Forms.Views.DorsaviSettingsPage">
 
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Back"
+            Command="{Binding IPopPage, Mode=OneWay}"
+                 Order="Primary"
+                 Priority="0" />
+    </ContentPage.ToolbarItems>
+
+    <StackLayout Orientation="Vertical">
+        <Label Text="{StaticResource Key=SettingsPage.WelcomeMessageTitle}"
+                   FontFamily="{StaticResource Key=FontFamily.RobotoRegular}" TextColor="{StaticResource Key=TopTitleTextColour}"
+               FontSize="{StaticResource Key=SettingsPage.WelcomeMessageTitle.FontSize}"/>
+
+        <Button Text="{StaticResource Key=SettingsPage.WelcomeMessage}" BackgroundColor="Transparent" WidthRequest="100" Command="{Binding IOpenAboutUs, Mode=OneWay}"
+                   FontFamily="{StaticResource Key=FontFamily.RobotoRegular}" TextColor="{StaticResource Key=StandardDescriptionTextColour}"
+               FontSize="{StaticResource Key=SettingsPage.WelcomeMessage.FontSize}"/>
+
+    </StackLayout>
 </ContentPage>

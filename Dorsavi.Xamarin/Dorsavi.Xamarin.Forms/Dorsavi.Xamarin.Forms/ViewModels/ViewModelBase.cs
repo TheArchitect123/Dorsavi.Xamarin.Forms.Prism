@@ -1,5 +1,7 @@
-﻿using Prism.Mvvm;
+﻿using Dorsavi.Xamarin.Forms.Prism.Extensions;
+using Prism.Mvvm;
 using Prism.Navigation;
+using System.Windows.Input;
 
 namespace Dorsavi.Xamarin.Forms.ViewModels
 {
@@ -19,6 +21,12 @@ namespace Dorsavi.Xamarin.Forms.ViewModels
         {
             get { return this._AuthorName; }
             set { this.SetProperty(ref this._AuthorName, value); }
+        }
+
+        public ICommand IPopPage => new RelayExtension(PopPage, () => true);
+        private async void PopPage()
+        {
+            await this.NavigationService.GoBackAsync();
         }
 
         public ViewModelBase(INavigationService navigationService)

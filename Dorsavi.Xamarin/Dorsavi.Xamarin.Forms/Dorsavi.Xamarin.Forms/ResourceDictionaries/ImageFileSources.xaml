@@ -1,6 +1,10 @@
 ﻿<ResourceDictionary
-    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
-    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
     
-    <x:String x:Key="TwitterSource">/Assets/social/twitter.png</x:String>
+    <OnPlatform x:TypeArguments="x:String" x:Key="ActionBar.SettingsIcon">
+        <On Platform="Android" Value="ic_account_circle_black_36dp.png" />
+        <On Platform="UWP" Value="/Assets/ic_account_circle_black_36dp.png" />
+        <On Platform="iOS" Value="ic_account_circle_black_36pt.png" />
+    </OnPlatform>
 </ResourceDictionary>

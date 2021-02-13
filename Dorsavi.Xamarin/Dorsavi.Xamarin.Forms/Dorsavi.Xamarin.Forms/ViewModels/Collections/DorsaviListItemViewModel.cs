@@ -12,21 +12,21 @@ namespace Dorsavi.Xamarin.Forms.ViewModels.Collections
         public string Name
         {
             get { return this._Name; }
-            set { this.SetProperty(ref this._Name, value); }
+            set { this.SetProperty(ref this._Name, "Name Of User: " + value); }
         }
 
         private string _Gender;
         public string Gender
         {
             get { return this._Gender; }
-            set { this.SetProperty(ref this._Gender, value); }
+            set { this.SetProperty(ref this._Gender, "Gender: " + value); }
         }
 
         private string _Age;
         public string Age
         {
             get { return this._Age; }
-            set { this.SetProperty(ref this._Age, value); }
+            set { this.SetProperty(ref this._Age, "Age: " + value); }
         }
 
         public List<DorsaviPetItems> PetItems { get; set; }
