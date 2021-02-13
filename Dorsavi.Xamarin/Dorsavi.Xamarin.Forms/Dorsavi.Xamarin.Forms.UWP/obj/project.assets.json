@@ -2,6 +2,18 @@
   "version": 3,
   "targets": {
     "UAP,Version=v10.0.16299": {
+      "Acr.UserDialogs/7.1.0.475": {
+        "type": "package",
+        "dependencies": {
+          "Coding4Fun.Toolkit.Controls": "2.1.8"
+        },
+        "compile": {
+          "lib/uap10.0.16299/Acr.UserDialogs.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0.16299/Acr.UserDialogs.dll": {}
+        }
+      },
       "AutoMapper/10.1.1": {
         "type": "package",
         "dependencies": {
@@ -13,6 +25,17 @@
         },
         "runtime": {
           "lib/netstandard2.0/AutoMapper.dll": {}
+        }
+      },
+      "Coding4Fun.Toolkit.Controls/2.1.8": {
+        "type": "package",
+        "compile": {
+          "lib/netcore451/Coding4Fun.Toolkit.Controls.dll": {},
+          "lib/netcore451/Coding4Fun.Toolkit.dll": {}
+        },
+        "runtime": {
+          "lib/netcore451/Coding4Fun.Toolkit.Controls.dll": {},
+          "lib/netcore451/Coding4Fun.Toolkit.dll": {}
         }
       },
       "Com.Airbnb.Xamarin.Forms.Lottie/4.0.8": {
@@ -876,9 +899,6 @@
           "build/runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk.targets": {}
         }
       },
-      "sqlite-net/1.6.292": {
-        "type": "package"
-      },
       "sqlite-net-pcl/1.4.118": {
         "type": "package",
         "dependencies": {
@@ -889,18 +909,6 @@
         },
         "runtime": {
           "lib/netstandard1.1/SQLite-net.dll": {}
-        }
-      },
-      "sqlite-net-sqlcipher/1.7.335": {
-        "type": "package",
-        "dependencies": {
-          "SQLitePCLRaw.bundle_e_sqlcipher": "2.0.3"
-        },
-        "compile": {
-          "lib/netstandard2.0/SQLite-net.dll": {}
-        },
-        "runtime": {
-          "lib/netstandard2.0/SQLite-net.dll": {}
         }
       },
       "SQLiteNetExtensions/2.1.0": {
@@ -914,20 +922,6 @@
         },
         "runtime": {
           "lib/netstandard1.1/SQLiteNetExtensions.dll": {}
-        }
-      },
-      "SQLitePCLRaw.bundle_e_sqlcipher/2.0.3": {
-        "type": "package",
-        "dependencies": {
-          "SQLitePCLRaw.core": "2.0.3",
-          "SQLitePCLRaw.lib.e_sqlcipher": "2.0.3",
-          "SQLitePCLRaw.provider.e_sqlcipher": "2.0.3"
-        },
-        "compile": {
-          "lib/netstandard2.0/SQLitePCLRaw.batteries_v2.dll": {}
-        },
-        "runtime": {
-          "lib/netstandard2.0/SQLitePCLRaw.batteries_v2.dll": {}
         }
       },
       "SQLitePCLRaw.bundle_green/1.1.5": {
@@ -946,91 +940,16 @@
           "lib/uap10.0/SQLitePCLRaw.batteries_v2.dll": {}
         }
       },
-      "SQLitePCLRaw.core/2.0.3": {
+      "SQLitePCLRaw.core/1.1.5": {
         "type": "package",
         "dependencies": {
-          "System.Memory": "4.5.3"
+          "NETStandard.Library": "1.6.0"
         },
         "compile": {
-          "lib/netstandard2.0/SQLitePCLRaw.core.dll": {}
+          "lib/uap10.0/SQLitePCLRaw.core.dll": {}
         },
         "runtime": {
-          "lib/netstandard2.0/SQLitePCLRaw.core.dll": {}
-        }
-      },
-      "SQLitePCLRaw.lib.e_sqlcipher/2.0.3": {
-        "type": "package",
-        "compile": {
-          "lib/netstandard2.0/_._": {}
-        },
-        "runtime": {
-          "lib/netstandard2.0/_._": {}
-        },
-        "runtimeTargets": {
-          "runtimes/alpine-x64/native/libe_sqlcipher.so": {
-            "assetType": "native",
-            "rid": "alpine-x64"
-          },
-          "runtimes/linux-arm/native/libe_sqlcipher.so": {
-            "assetType": "native",
-            "rid": "linux-arm"
-          },
-          "runtimes/linux-arm64/native/libe_sqlcipher.so": {
-            "assetType": "native",
-            "rid": "linux-arm64"
-          },
-          "runtimes/linux-armel/native/libe_sqlcipher.so": {
-            "assetType": "native",
-            "rid": "linux-armel"
-          },
-          "runtimes/linux-musl-x64/native/libe_sqlcipher.so": {
-            "assetType": "native",
-            "rid": "linux-musl-x64"
-          },
-          "runtimes/linux-x64/native/libe_sqlcipher.so": {
-            "assetType": "native",
-            "rid": "linux-x64"
-          },
-          "runtimes/linux-x86/native/libe_sqlcipher.so": {
-            "assetType": "native",
-            "rid": "linux-x86"
-          },
-          "runtimes/osx-x64/native/libe_sqlcipher.dylib": {
-            "assetType": "native",
-            "rid": "osx-x64"
-          },
-          "runtimes/win-arm/native/e_sqlcipher.dll": {
-            "assetType": "native",
-            "rid": "win-arm"
-          },
-          "runtimes/win-arm64/native/e_sqlcipher.dll": {
-            "assetType": "native",
-            "rid": "win-arm64"
-          },
-          "runtimes/win-x64/native/e_sqlcipher.dll": {
-            "assetType": "native",
-            "rid": "win-x64"
-          },
-          "runtimes/win-x86/native/e_sqlcipher.dll": {
-            "assetType": "native",
-            "rid": "win-x86"
-          },
-          "runtimes/win10-arm/nativeassets/uap10.0/e_sqlcipher.dll": {
-            "assetType": "native",
-            "rid": "win10-arm"
-          },
-          "runtimes/win10-arm64/nativeassets/uap10.0/e_sqlcipher.dll": {
-            "assetType": "native",
-            "rid": "win10-arm64"
-          },
-          "runtimes/win10-x64/nativeassets/uap10.0/e_sqlcipher.dll": {
-            "assetType": "native",
-            "rid": "win10-x64"
-          },
-          "runtimes/win10-x86/nativeassets/uap10.0/e_sqlcipher.dll": {
-            "assetType": "native",
-            "rid": "win10-x86"
-          }
+          "lib/uap10.0/SQLitePCLRaw.core.dll": {}
         }
       },
       "SQLitePCLRaw.lib.e_sqlite3.v140/1.1.5": {
@@ -1051,18 +970,6 @@
             "assetType": "native",
             "rid": "win10-x86"
           }
-        }
-      },
-      "SQLitePCLRaw.provider.e_sqlcipher/2.0.3": {
-        "type": "package",
-        "dependencies": {
-          "SQLitePCLRaw.core": "2.0.3"
-        },
-        "compile": {
-          "lib/uap10.0/SQLitePCLRaw.provider.e_sqlcipher.dll": {}
-        },
-        "runtime": {
-          "lib/uap10.0/SQLitePCLRaw.provider.e_sqlcipher.dll": {}
         }
       },
       "SQLitePCLRaw.provider.e_sqlite3.uwp10/1.1.5": {
@@ -1406,6 +1313,7 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
+          "Acr.UserDialogs": "7.1.0.475",
           "AutoMapper": "10.1.1",
           "Dorsavi.Xamarin.Forms.Prism.Extensions": "1.0.0",
           "Dorsavi.Xamarin.Forms.RemoteServer.Models": "1.0.0",
@@ -1420,9 +1328,7 @@
           "XF.Material": "1.7.7",
           "Xamarin.Essentials": "1.6.1",
           "Xamarin.Essentials.Interfaces": "1.5.3.2",
-          "Xamarin.Forms": "4.8.0.1364",
-          "sqlite-net": "1.6.292",
-          "sqlite-net-sqlcipher": "1.7.335"
+          "Xamarin.Forms": "4.8.0.1364"
         },
         "compile": {
           "bin/placeholder/Dorsavi.Xamarin.Forms.dll": {}
@@ -1477,6 +1383,18 @@
       }
     },
     "UAP,Version=v10.0.16299/win10-arm": {
+      "Acr.UserDialogs/7.1.0.475": {
+        "type": "package",
+        "dependencies": {
+          "Coding4Fun.Toolkit.Controls": "2.1.8"
+        },
+        "compile": {
+          "lib/uap10.0.16299/Acr.UserDialogs.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0.16299/Acr.UserDialogs.dll": {}
+        }
+      },
       "AutoMapper/10.1.1": {
         "type": "package",
         "dependencies": {
@@ -1488,6 +1406,17 @@
         },
         "runtime": {
           "lib/netstandard2.0/AutoMapper.dll": {}
+        }
+      },
+      "Coding4Fun.Toolkit.Controls/2.1.8": {
+        "type": "package",
+        "compile": {
+          "lib/netcore451/Coding4Fun.Toolkit.Controls.dll": {},
+          "lib/netcore451/Coding4Fun.Toolkit.dll": {}
+        },
+        "runtime": {
+          "lib/netcore451/Coding4Fun.Toolkit.Controls.dll": {},
+          "lib/netcore451/Coding4Fun.Toolkit.dll": {}
         }
       },
       "Com.Airbnb.Xamarin.Forms.Lottie/4.0.8": {
@@ -2596,9 +2525,6 @@
           "runtimes/win/lib/netcore50/System.Private.Uri.dll": {}
         }
       },
-      "sqlite-net/1.6.292": {
-        "type": "package"
-      },
       "sqlite-net-pcl/1.4.118": {
         "type": "package",
         "dependencies": {
@@ -2609,18 +2535,6 @@
         },
         "runtime": {
           "lib/netstandard1.1/SQLite-net.dll": {}
-        }
-      },
-      "sqlite-net-sqlcipher/1.7.335": {
-        "type": "package",
-        "dependencies": {
-          "SQLitePCLRaw.bundle_e_sqlcipher": "2.0.3"
-        },
-        "compile": {
-          "lib/netstandard2.0/SQLite-net.dll": {}
-        },
-        "runtime": {
-          "lib/netstandard2.0/SQLite-net.dll": {}
         }
       },
       "SQLiteNetExtensions/2.1.0": {
@@ -2634,20 +2548,6 @@
         },
         "runtime": {
           "lib/netstandard1.1/SQLiteNetExtensions.dll": {}
-        }
-      },
-      "SQLitePCLRaw.bundle_e_sqlcipher/2.0.3": {
-        "type": "package",
-        "dependencies": {
-          "SQLitePCLRaw.core": "2.0.3",
-          "SQLitePCLRaw.lib.e_sqlcipher": "2.0.3",
-          "SQLitePCLRaw.provider.e_sqlcipher": "2.0.3"
-        },
-        "compile": {
-          "lib/netstandard2.0/SQLitePCLRaw.batteries_v2.dll": {}
-        },
-        "runtime": {
-          "lib/netstandard2.0/SQLitePCLRaw.batteries_v2.dll": {}
         }
       },
       "SQLitePCLRaw.bundle_green/1.1.5": {
@@ -2666,28 +2566,16 @@
           "lib/uap10.0/SQLitePCLRaw.batteries_v2.dll": {}
         }
       },
-      "SQLitePCLRaw.core/2.0.3": {
+      "SQLitePCLRaw.core/1.1.5": {
         "type": "package",
         "dependencies": {
-          "System.Memory": "4.5.3"
+          "NETStandard.Library": "1.6.0"
         },
         "compile": {
-          "lib/netstandard2.0/SQLitePCLRaw.core.dll": {}
+          "lib/uap10.0/SQLitePCLRaw.core.dll": {}
         },
         "runtime": {
-          "lib/netstandard2.0/SQLitePCLRaw.core.dll": {}
-        }
-      },
-      "SQLitePCLRaw.lib.e_sqlcipher/2.0.3": {
-        "type": "package",
-        "compile": {
-          "lib/netstandard2.0/_._": {}
-        },
-        "runtime": {
-          "lib/netstandard2.0/_._": {}
-        },
-        "native": {
-          "runtimes/win10-arm/nativeassets/uap10.0/e_sqlcipher.dll": {}
+          "lib/uap10.0/SQLitePCLRaw.core.dll": {}
         }
       },
       "SQLitePCLRaw.lib.e_sqlite3.v140/1.1.5": {
@@ -2697,18 +2585,6 @@
         },
         "build": {
           "build/_._": {}
-        }
-      },
-      "SQLitePCLRaw.provider.e_sqlcipher/2.0.3": {
-        "type": "package",
-        "dependencies": {
-          "SQLitePCLRaw.core": "2.0.3"
-        },
-        "compile": {
-          "lib/uap10.0/SQLitePCLRaw.provider.e_sqlcipher.dll": {}
-        },
-        "runtime": {
-          "lib/uap10.0/SQLitePCLRaw.provider.e_sqlcipher.dll": {}
         }
       },
       "SQLitePCLRaw.provider.e_sqlite3.uwp10/1.1.5": {
@@ -3034,6 +2910,7 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
+          "Acr.UserDialogs": "7.1.0.475",
           "AutoMapper": "10.1.1",
           "Dorsavi.Xamarin.Forms.Prism.Extensions": "1.0.0",
           "Dorsavi.Xamarin.Forms.RemoteServer.Models": "1.0.0",
@@ -3048,9 +2925,7 @@
           "XF.Material": "1.7.7",
           "Xamarin.Essentials": "1.6.1",
           "Xamarin.Essentials.Interfaces": "1.5.3.2",
-          "Xamarin.Forms": "4.8.0.1364",
-          "sqlite-net": "1.6.292",
-          "sqlite-net-sqlcipher": "1.7.335"
+          "Xamarin.Forms": "4.8.0.1364"
         },
         "compile": {
           "bin/placeholder/Dorsavi.Xamarin.Forms.dll": {}
@@ -3105,6 +2980,18 @@
       }
     },
     "UAP,Version=v10.0.16299/win10-arm-aot": {
+      "Acr.UserDialogs/7.1.0.475": {
+        "type": "package",
+        "dependencies": {
+          "Coding4Fun.Toolkit.Controls": "2.1.8"
+        },
+        "compile": {
+          "lib/uap10.0.16299/Acr.UserDialogs.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0.16299/Acr.UserDialogs.dll": {}
+        }
+      },
       "AutoMapper/10.1.1": {
         "type": "package",
         "dependencies": {
@@ -3116,6 +3003,17 @@
         },
         "runtime": {
           "lib/netstandard2.0/AutoMapper.dll": {}
+        }
+      },
+      "Coding4Fun.Toolkit.Controls/2.1.8": {
+        "type": "package",
+        "compile": {
+          "lib/netcore451/Coding4Fun.Toolkit.Controls.dll": {},
+          "lib/netcore451/Coding4Fun.Toolkit.dll": {}
+        },
+        "runtime": {
+          "lib/netcore451/Coding4Fun.Toolkit.Controls.dll": {},
+          "lib/netcore451/Coding4Fun.Toolkit.dll": {}
         }
       },
       "Com.Airbnb.Xamarin.Forms.Lottie/4.0.8": {
@@ -4255,9 +4153,6 @@
           "runtimes/aot/lib/netcore50/System.Private.Uri.dll": {}
         }
       },
-      "sqlite-net/1.6.292": {
-        "type": "package"
-      },
       "sqlite-net-pcl/1.4.118": {
         "type": "package",
         "dependencies": {
@@ -4268,18 +4163,6 @@
         },
         "runtime": {
           "lib/netstandard1.1/SQLite-net.dll": {}
-        }
-      },
-      "sqlite-net-sqlcipher/1.7.335": {
-        "type": "package",
-        "dependencies": {
-          "SQLitePCLRaw.bundle_e_sqlcipher": "2.0.3"
-        },
-        "compile": {
-          "lib/netstandard2.0/SQLite-net.dll": {}
-        },
-        "runtime": {
-          "lib/netstandard2.0/SQLite-net.dll": {}
         }
       },
       "SQLiteNetExtensions/2.1.0": {
@@ -4293,20 +4176,6 @@
         },
         "runtime": {
           "lib/netstandard1.1/SQLiteNetExtensions.dll": {}
-        }
-      },
-      "SQLitePCLRaw.bundle_e_sqlcipher/2.0.3": {
-        "type": "package",
-        "dependencies": {
-          "SQLitePCLRaw.core": "2.0.3",
-          "SQLitePCLRaw.lib.e_sqlcipher": "2.0.3",
-          "SQLitePCLRaw.provider.e_sqlcipher": "2.0.3"
-        },
-        "compile": {
-          "lib/netstandard2.0/SQLitePCLRaw.batteries_v2.dll": {}
-        },
-        "runtime": {
-          "lib/netstandard2.0/SQLitePCLRaw.batteries_v2.dll": {}
         }
       },
       "SQLitePCLRaw.bundle_green/1.1.5": {
@@ -4325,28 +4194,16 @@
           "lib/uap10.0/SQLitePCLRaw.batteries_v2.dll": {}
         }
       },
-      "SQLitePCLRaw.core/2.0.3": {
+      "SQLitePCLRaw.core/1.1.5": {
         "type": "package",
         "dependencies": {
-          "System.Memory": "4.5.3"
+          "NETStandard.Library": "1.6.0"
         },
         "compile": {
-          "lib/netstandard2.0/SQLitePCLRaw.core.dll": {}
+          "lib/uap10.0/SQLitePCLRaw.core.dll": {}
         },
         "runtime": {
-          "lib/netstandard2.0/SQLitePCLRaw.core.dll": {}
-        }
-      },
-      "SQLitePCLRaw.lib.e_sqlcipher/2.0.3": {
-        "type": "package",
-        "compile": {
-          "lib/netstandard2.0/_._": {}
-        },
-        "runtime": {
-          "lib/netstandard2.0/_._": {}
-        },
-        "native": {
-          "runtimes/win10-arm/nativeassets/uap10.0/e_sqlcipher.dll": {}
+          "lib/uap10.0/SQLitePCLRaw.core.dll": {}
         }
       },
       "SQLitePCLRaw.lib.e_sqlite3.v140/1.1.5": {
@@ -4356,18 +4213,6 @@
         },
         "build": {
           "build/_._": {}
-        }
-      },
-      "SQLitePCLRaw.provider.e_sqlcipher/2.0.3": {
-        "type": "package",
-        "dependencies": {
-          "SQLitePCLRaw.core": "2.0.3"
-        },
-        "compile": {
-          "lib/uap10.0/SQLitePCLRaw.provider.e_sqlcipher.dll": {}
-        },
-        "runtime": {
-          "lib/uap10.0/SQLitePCLRaw.provider.e_sqlcipher.dll": {}
         }
       },
       "SQLitePCLRaw.provider.e_sqlite3.uwp10/1.1.5": {
@@ -4737,6 +4582,7 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
+          "Acr.UserDialogs": "7.1.0.475",
           "AutoMapper": "10.1.1",
           "Dorsavi.Xamarin.Forms.Prism.Extensions": "1.0.0",
           "Dorsavi.Xamarin.Forms.RemoteServer.Models": "1.0.0",
@@ -4751,9 +4597,7 @@
           "XF.Material": "1.7.7",
           "Xamarin.Essentials": "1.6.1",
           "Xamarin.Essentials.Interfaces": "1.5.3.2",
-          "Xamarin.Forms": "4.8.0.1364",
-          "sqlite-net": "1.6.292",
-          "sqlite-net-sqlcipher": "1.7.335"
+          "Xamarin.Forms": "4.8.0.1364"
         },
         "compile": {
           "bin/placeholder/Dorsavi.Xamarin.Forms.dll": {}
@@ -4808,6 +4652,18 @@
       }
     },
     "UAP,Version=v10.0.16299/win10-arm64-aot": {
+      "Acr.UserDialogs/7.1.0.475": {
+        "type": "package",
+        "dependencies": {
+          "Coding4Fun.Toolkit.Controls": "2.1.8"
+        },
+        "compile": {
+          "lib/uap10.0.16299/Acr.UserDialogs.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0.16299/Acr.UserDialogs.dll": {}
+        }
+      },
       "AutoMapper/10.1.1": {
         "type": "package",
         "dependencies": {
@@ -4819,6 +4675,17 @@
         },
         "runtime": {
           "lib/netstandard2.0/AutoMapper.dll": {}
+        }
+      },
+      "Coding4Fun.Toolkit.Controls/2.1.8": {
+        "type": "package",
+        "compile": {
+          "lib/netcore451/Coding4Fun.Toolkit.Controls.dll": {},
+          "lib/netcore451/Coding4Fun.Toolkit.dll": {}
+        },
+        "runtime": {
+          "lib/netcore451/Coding4Fun.Toolkit.Controls.dll": {},
+          "lib/netcore451/Coding4Fun.Toolkit.dll": {}
         }
       },
       "Com.Airbnb.Xamarin.Forms.Lottie/4.0.8": {
@@ -5958,9 +5825,6 @@
           "runtimes/aot/lib/netcore50/System.Private.Uri.dll": {}
         }
       },
-      "sqlite-net/1.6.292": {
-        "type": "package"
-      },
       "sqlite-net-pcl/1.4.118": {
         "type": "package",
         "dependencies": {
@@ -5971,18 +5835,6 @@
         },
         "runtime": {
           "lib/netstandard1.1/SQLite-net.dll": {}
-        }
-      },
-      "sqlite-net-sqlcipher/1.7.335": {
-        "type": "package",
-        "dependencies": {
-          "SQLitePCLRaw.bundle_e_sqlcipher": "2.0.3"
-        },
-        "compile": {
-          "lib/netstandard2.0/SQLite-net.dll": {}
-        },
-        "runtime": {
-          "lib/netstandard2.0/SQLite-net.dll": {}
         }
       },
       "SQLiteNetExtensions/2.1.0": {
@@ -5996,20 +5848,6 @@
         },
         "runtime": {
           "lib/netstandard1.1/SQLiteNetExtensions.dll": {}
-        }
-      },
-      "SQLitePCLRaw.bundle_e_sqlcipher/2.0.3": {
-        "type": "package",
-        "dependencies": {
-          "SQLitePCLRaw.core": "2.0.3",
-          "SQLitePCLRaw.lib.e_sqlcipher": "2.0.3",
-          "SQLitePCLRaw.provider.e_sqlcipher": "2.0.3"
-        },
-        "compile": {
-          "lib/netstandard2.0/SQLitePCLRaw.batteries_v2.dll": {}
-        },
-        "runtime": {
-          "lib/netstandard2.0/SQLitePCLRaw.batteries_v2.dll": {}
         }
       },
       "SQLitePCLRaw.bundle_green/1.1.5": {
@@ -6028,46 +5866,22 @@
           "lib/uap10.0/SQLitePCLRaw.batteries_v2.dll": {}
         }
       },
-      "SQLitePCLRaw.core/2.0.3": {
+      "SQLitePCLRaw.core/1.1.5": {
         "type": "package",
         "dependencies": {
-          "System.Memory": "4.5.3"
+          "NETStandard.Library": "1.6.0"
         },
         "compile": {
-          "lib/netstandard2.0/SQLitePCLRaw.core.dll": {}
+          "lib/uap10.0/SQLitePCLRaw.core.dll": {}
         },
         "runtime": {
-          "lib/netstandard2.0/SQLitePCLRaw.core.dll": {}
-        }
-      },
-      "SQLitePCLRaw.lib.e_sqlcipher/2.0.3": {
-        "type": "package",
-        "compile": {
-          "lib/netstandard2.0/_._": {}
-        },
-        "runtime": {
-          "lib/netstandard2.0/_._": {}
-        },
-        "native": {
-          "runtimes/win10-arm64/nativeassets/uap10.0/e_sqlcipher.dll": {}
+          "lib/uap10.0/SQLitePCLRaw.core.dll": {}
         }
       },
       "SQLitePCLRaw.lib.e_sqlite3.v140/1.1.5": {
         "type": "package",
         "build": {
           "build/_._": {}
-        }
-      },
-      "SQLitePCLRaw.provider.e_sqlcipher/2.0.3": {
-        "type": "package",
-        "dependencies": {
-          "SQLitePCLRaw.core": "2.0.3"
-        },
-        "compile": {
-          "lib/uap10.0/SQLitePCLRaw.provider.e_sqlcipher.dll": {}
-        },
-        "runtime": {
-          "lib/uap10.0/SQLitePCLRaw.provider.e_sqlcipher.dll": {}
         }
       },
       "SQLitePCLRaw.provider.e_sqlite3.uwp10/1.1.5": {
@@ -6434,6 +6248,7 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
+          "Acr.UserDialogs": "7.1.0.475",
           "AutoMapper": "10.1.1",
           "Dorsavi.Xamarin.Forms.Prism.Extensions": "1.0.0",
           "Dorsavi.Xamarin.Forms.RemoteServer.Models": "1.0.0",
@@ -6448,9 +6263,7 @@
           "XF.Material": "1.7.7",
           "Xamarin.Essentials": "1.6.1",
           "Xamarin.Essentials.Interfaces": "1.5.3.2",
-          "Xamarin.Forms": "4.8.0.1364",
-          "sqlite-net": "1.6.292",
-          "sqlite-net-sqlcipher": "1.7.335"
+          "Xamarin.Forms": "4.8.0.1364"
         },
         "compile": {
           "bin/placeholder/Dorsavi.Xamarin.Forms.dll": {}
@@ -6505,6 +6318,18 @@
       }
     },
     "UAP,Version=v10.0.16299/win10-x64": {
+      "Acr.UserDialogs/7.1.0.475": {
+        "type": "package",
+        "dependencies": {
+          "Coding4Fun.Toolkit.Controls": "2.1.8"
+        },
+        "compile": {
+          "lib/uap10.0.16299/Acr.UserDialogs.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0.16299/Acr.UserDialogs.dll": {}
+        }
+      },
       "AutoMapper/10.1.1": {
         "type": "package",
         "dependencies": {
@@ -6516,6 +6341,17 @@
         },
         "runtime": {
           "lib/netstandard2.0/AutoMapper.dll": {}
+        }
+      },
+      "Coding4Fun.Toolkit.Controls/2.1.8": {
+        "type": "package",
+        "compile": {
+          "lib/netcore451/Coding4Fun.Toolkit.Controls.dll": {},
+          "lib/netcore451/Coding4Fun.Toolkit.dll": {}
+        },
+        "runtime": {
+          "lib/netcore451/Coding4Fun.Toolkit.Controls.dll": {},
+          "lib/netcore451/Coding4Fun.Toolkit.dll": {}
         }
       },
       "Com.Airbnb.Xamarin.Forms.Lottie/4.0.8": {
@@ -7624,9 +7460,6 @@
           "runtimes/win/lib/netcore50/System.Private.Uri.dll": {}
         }
       },
-      "sqlite-net/1.6.292": {
-        "type": "package"
-      },
       "sqlite-net-pcl/1.4.118": {
         "type": "package",
         "dependencies": {
@@ -7637,18 +7470,6 @@
         },
         "runtime": {
           "lib/netstandard1.1/SQLite-net.dll": {}
-        }
-      },
-      "sqlite-net-sqlcipher/1.7.335": {
-        "type": "package",
-        "dependencies": {
-          "SQLitePCLRaw.bundle_e_sqlcipher": "2.0.3"
-        },
-        "compile": {
-          "lib/netstandard2.0/SQLite-net.dll": {}
-        },
-        "runtime": {
-          "lib/netstandard2.0/SQLite-net.dll": {}
         }
       },
       "SQLiteNetExtensions/2.1.0": {
@@ -7662,20 +7483,6 @@
         },
         "runtime": {
           "lib/netstandard1.1/SQLiteNetExtensions.dll": {}
-        }
-      },
-      "SQLitePCLRaw.bundle_e_sqlcipher/2.0.3": {
-        "type": "package",
-        "dependencies": {
-          "SQLitePCLRaw.core": "2.0.3",
-          "SQLitePCLRaw.lib.e_sqlcipher": "2.0.3",
-          "SQLitePCLRaw.provider.e_sqlcipher": "2.0.3"
-        },
-        "compile": {
-          "lib/netstandard2.0/SQLitePCLRaw.batteries_v2.dll": {}
-        },
-        "runtime": {
-          "lib/netstandard2.0/SQLitePCLRaw.batteries_v2.dll": {}
         }
       },
       "SQLitePCLRaw.bundle_green/1.1.5": {
@@ -7694,28 +7501,16 @@
           "lib/uap10.0/SQLitePCLRaw.batteries_v2.dll": {}
         }
       },
-      "SQLitePCLRaw.core/2.0.3": {
+      "SQLitePCLRaw.core/1.1.5": {
         "type": "package",
         "dependencies": {
-          "System.Memory": "4.5.3"
+          "NETStandard.Library": "1.6.0"
         },
         "compile": {
-          "lib/netstandard2.0/SQLitePCLRaw.core.dll": {}
+          "lib/uap10.0/SQLitePCLRaw.core.dll": {}
         },
         "runtime": {
-          "lib/netstandard2.0/SQLitePCLRaw.core.dll": {}
-        }
-      },
-      "SQLitePCLRaw.lib.e_sqlcipher/2.0.3": {
-        "type": "package",
-        "compile": {
-          "lib/netstandard2.0/_._": {}
-        },
-        "runtime": {
-          "lib/netstandard2.0/_._": {}
-        },
-        "native": {
-          "runtimes/win10-x64/nativeassets/uap10.0/e_sqlcipher.dll": {}
+          "lib/uap10.0/SQLitePCLRaw.core.dll": {}
         }
       },
       "SQLitePCLRaw.lib.e_sqlite3.v140/1.1.5": {
@@ -7725,18 +7520,6 @@
         },
         "build": {
           "build/_._": {}
-        }
-      },
-      "SQLitePCLRaw.provider.e_sqlcipher/2.0.3": {
-        "type": "package",
-        "dependencies": {
-          "SQLitePCLRaw.core": "2.0.3"
-        },
-        "compile": {
-          "lib/uap10.0/SQLitePCLRaw.provider.e_sqlcipher.dll": {}
-        },
-        "runtime": {
-          "lib/uap10.0/SQLitePCLRaw.provider.e_sqlcipher.dll": {}
         }
       },
       "SQLitePCLRaw.provider.e_sqlite3.uwp10/1.1.5": {
@@ -8062,6 +7845,7 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
+          "Acr.UserDialogs": "7.1.0.475",
           "AutoMapper": "10.1.1",
           "Dorsavi.Xamarin.Forms.Prism.Extensions": "1.0.0",
           "Dorsavi.Xamarin.Forms.RemoteServer.Models": "1.0.0",
@@ -8076,9 +7860,7 @@
           "XF.Material": "1.7.7",
           "Xamarin.Essentials": "1.6.1",
           "Xamarin.Essentials.Interfaces": "1.5.3.2",
-          "Xamarin.Forms": "4.8.0.1364",
-          "sqlite-net": "1.6.292",
-          "sqlite-net-sqlcipher": "1.7.335"
+          "Xamarin.Forms": "4.8.0.1364"
         },
         "compile": {
           "bin/placeholder/Dorsavi.Xamarin.Forms.dll": {}
@@ -8133,6 +7915,18 @@
       }
     },
     "UAP,Version=v10.0.16299/win10-x64-aot": {
+      "Acr.UserDialogs/7.1.0.475": {
+        "type": "package",
+        "dependencies": {
+          "Coding4Fun.Toolkit.Controls": "2.1.8"
+        },
+        "compile": {
+          "lib/uap10.0.16299/Acr.UserDialogs.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0.16299/Acr.UserDialogs.dll": {}
+        }
+      },
       "AutoMapper/10.1.1": {
         "type": "package",
         "dependencies": {
@@ -8144,6 +7938,17 @@
         },
         "runtime": {
           "lib/netstandard2.0/AutoMapper.dll": {}
+        }
+      },
+      "Coding4Fun.Toolkit.Controls/2.1.8": {
+        "type": "package",
+        "compile": {
+          "lib/netcore451/Coding4Fun.Toolkit.Controls.dll": {},
+          "lib/netcore451/Coding4Fun.Toolkit.dll": {}
+        },
+        "runtime": {
+          "lib/netcore451/Coding4Fun.Toolkit.Controls.dll": {},
+          "lib/netcore451/Coding4Fun.Toolkit.dll": {}
         }
       },
       "Com.Airbnb.Xamarin.Forms.Lottie/4.0.8": {
@@ -9283,9 +9088,6 @@
           "runtimes/aot/lib/netcore50/System.Private.Uri.dll": {}
         }
       },
-      "sqlite-net/1.6.292": {
-        "type": "package"
-      },
       "sqlite-net-pcl/1.4.118": {
         "type": "package",
         "dependencies": {
@@ -9296,18 +9098,6 @@
         },
         "runtime": {
           "lib/netstandard1.1/SQLite-net.dll": {}
-        }
-      },
-      "sqlite-net-sqlcipher/1.7.335": {
-        "type": "package",
-        "dependencies": {
-          "SQLitePCLRaw.bundle_e_sqlcipher": "2.0.3"
-        },
-        "compile": {
-          "lib/netstandard2.0/SQLite-net.dll": {}
-        },
-        "runtime": {
-          "lib/netstandard2.0/SQLite-net.dll": {}
         }
       },
       "SQLiteNetExtensions/2.1.0": {
@@ -9321,20 +9111,6 @@
         },
         "runtime": {
           "lib/netstandard1.1/SQLiteNetExtensions.dll": {}
-        }
-      },
-      "SQLitePCLRaw.bundle_e_sqlcipher/2.0.3": {
-        "type": "package",
-        "dependencies": {
-          "SQLitePCLRaw.core": "2.0.3",
-          "SQLitePCLRaw.lib.e_sqlcipher": "2.0.3",
-          "SQLitePCLRaw.provider.e_sqlcipher": "2.0.3"
-        },
-        "compile": {
-          "lib/netstandard2.0/SQLitePCLRaw.batteries_v2.dll": {}
-        },
-        "runtime": {
-          "lib/netstandard2.0/SQLitePCLRaw.batteries_v2.dll": {}
         }
       },
       "SQLitePCLRaw.bundle_green/1.1.5": {
@@ -9353,28 +9129,16 @@
           "lib/uap10.0/SQLitePCLRaw.batteries_v2.dll": {}
         }
       },
-      "SQLitePCLRaw.core/2.0.3": {
+      "SQLitePCLRaw.core/1.1.5": {
         "type": "package",
         "dependencies": {
-          "System.Memory": "4.5.3"
+          "NETStandard.Library": "1.6.0"
         },
         "compile": {
-          "lib/netstandard2.0/SQLitePCLRaw.core.dll": {}
+          "lib/uap10.0/SQLitePCLRaw.core.dll": {}
         },
         "runtime": {
-          "lib/netstandard2.0/SQLitePCLRaw.core.dll": {}
-        }
-      },
-      "SQLitePCLRaw.lib.e_sqlcipher/2.0.3": {
-        "type": "package",
-        "compile": {
-          "lib/netstandard2.0/_._": {}
-        },
-        "runtime": {
-          "lib/netstandard2.0/_._": {}
-        },
-        "native": {
-          "runtimes/win10-x64/nativeassets/uap10.0/e_sqlcipher.dll": {}
+          "lib/uap10.0/SQLitePCLRaw.core.dll": {}
         }
       },
       "SQLitePCLRaw.lib.e_sqlite3.v140/1.1.5": {
@@ -9384,18 +9148,6 @@
         },
         "build": {
           "build/_._": {}
-        }
-      },
-      "SQLitePCLRaw.provider.e_sqlcipher/2.0.3": {
-        "type": "package",
-        "dependencies": {
-          "SQLitePCLRaw.core": "2.0.3"
-        },
-        "compile": {
-          "lib/uap10.0/SQLitePCLRaw.provider.e_sqlcipher.dll": {}
-        },
-        "runtime": {
-          "lib/uap10.0/SQLitePCLRaw.provider.e_sqlcipher.dll": {}
         }
       },
       "SQLitePCLRaw.provider.e_sqlite3.uwp10/1.1.5": {
@@ -9765,6 +9517,7 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
+          "Acr.UserDialogs": "7.1.0.475",
           "AutoMapper": "10.1.1",
           "Dorsavi.Xamarin.Forms.Prism.Extensions": "1.0.0",
           "Dorsavi.Xamarin.Forms.RemoteServer.Models": "1.0.0",
@@ -9779,9 +9532,7 @@
           "XF.Material": "1.7.7",
           "Xamarin.Essentials": "1.6.1",
           "Xamarin.Essentials.Interfaces": "1.5.3.2",
-          "Xamarin.Forms": "4.8.0.1364",
-          "sqlite-net": "1.6.292",
-          "sqlite-net-sqlcipher": "1.7.335"
+          "Xamarin.Forms": "4.8.0.1364"
         },
         "compile": {
           "bin/placeholder/Dorsavi.Xamarin.Forms.dll": {}
@@ -9836,6 +9587,18 @@
       }
     },
     "UAP,Version=v10.0.16299/win10-x86": {
+      "Acr.UserDialogs/7.1.0.475": {
+        "type": "package",
+        "dependencies": {
+          "Coding4Fun.Toolkit.Controls": "2.1.8"
+        },
+        "compile": {
+          "lib/uap10.0.16299/Acr.UserDialogs.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0.16299/Acr.UserDialogs.dll": {}
+        }
+      },
       "AutoMapper/10.1.1": {
         "type": "package",
         "dependencies": {
@@ -9847,6 +9610,17 @@
         },
         "runtime": {
           "lib/netstandard2.0/AutoMapper.dll": {}
+        }
+      },
+      "Coding4Fun.Toolkit.Controls/2.1.8": {
+        "type": "package",
+        "compile": {
+          "lib/netcore451/Coding4Fun.Toolkit.Controls.dll": {},
+          "lib/netcore451/Coding4Fun.Toolkit.dll": {}
+        },
+        "runtime": {
+          "lib/netcore451/Coding4Fun.Toolkit.Controls.dll": {},
+          "lib/netcore451/Coding4Fun.Toolkit.dll": {}
         }
       },
       "Com.Airbnb.Xamarin.Forms.Lottie/4.0.8": {
@@ -10955,9 +10729,6 @@
           "runtimes/win/lib/netcore50/System.Private.Uri.dll": {}
         }
       },
-      "sqlite-net/1.6.292": {
-        "type": "package"
-      },
       "sqlite-net-pcl/1.4.118": {
         "type": "package",
         "dependencies": {
@@ -10968,18 +10739,6 @@
         },
         "runtime": {
           "lib/netstandard1.1/SQLite-net.dll": {}
-        }
-      },
-      "sqlite-net-sqlcipher/1.7.335": {
-        "type": "package",
-        "dependencies": {
-          "SQLitePCLRaw.bundle_e_sqlcipher": "2.0.3"
-        },
-        "compile": {
-          "lib/netstandard2.0/SQLite-net.dll": {}
-        },
-        "runtime": {
-          "lib/netstandard2.0/SQLite-net.dll": {}
         }
       },
       "SQLiteNetExtensions/2.1.0": {
@@ -10993,20 +10752,6 @@
         },
         "runtime": {
           "lib/netstandard1.1/SQLiteNetExtensions.dll": {}
-        }
-      },
-      "SQLitePCLRaw.bundle_e_sqlcipher/2.0.3": {
-        "type": "package",
-        "dependencies": {
-          "SQLitePCLRaw.core": "2.0.3",
-          "SQLitePCLRaw.lib.e_sqlcipher": "2.0.3",
-          "SQLitePCLRaw.provider.e_sqlcipher": "2.0.3"
-        },
-        "compile": {
-          "lib/netstandard2.0/SQLitePCLRaw.batteries_v2.dll": {}
-        },
-        "runtime": {
-          "lib/netstandard2.0/SQLitePCLRaw.batteries_v2.dll": {}
         }
       },
       "SQLitePCLRaw.bundle_green/1.1.5": {
@@ -11025,28 +10770,16 @@
           "lib/uap10.0/SQLitePCLRaw.batteries_v2.dll": {}
         }
       },
-      "SQLitePCLRaw.core/2.0.3": {
+      "SQLitePCLRaw.core/1.1.5": {
         "type": "package",
         "dependencies": {
-          "System.Memory": "4.5.3"
+          "NETStandard.Library": "1.6.0"
         },
         "compile": {
-          "lib/netstandard2.0/SQLitePCLRaw.core.dll": {}
+          "lib/uap10.0/SQLitePCLRaw.core.dll": {}
         },
         "runtime": {
-          "lib/netstandard2.0/SQLitePCLRaw.core.dll": {}
-        }
-      },
-      "SQLitePCLRaw.lib.e_sqlcipher/2.0.3": {
-        "type": "package",
-        "compile": {
-          "lib/netstandard2.0/_._": {}
-        },
-        "runtime": {
-          "lib/netstandard2.0/_._": {}
-        },
-        "native": {
-          "runtimes/win10-x86/nativeassets/uap10.0/e_sqlcipher.dll": {}
+          "lib/uap10.0/SQLitePCLRaw.core.dll": {}
         }
       },
       "SQLitePCLRaw.lib.e_sqlite3.v140/1.1.5": {
@@ -11056,18 +10789,6 @@
         },
         "build": {
           "build/_._": {}
-        }
-      },
-      "SQLitePCLRaw.provider.e_sqlcipher/2.0.3": {
-        "type": "package",
-        "dependencies": {
-          "SQLitePCLRaw.core": "2.0.3"
-        },
-        "compile": {
-          "lib/uap10.0/SQLitePCLRaw.provider.e_sqlcipher.dll": {}
-        },
-        "runtime": {
-          "lib/uap10.0/SQLitePCLRaw.provider.e_sqlcipher.dll": {}
         }
       },
       "SQLitePCLRaw.provider.e_sqlite3.uwp10/1.1.5": {
@@ -11393,6 +11114,7 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
+          "Acr.UserDialogs": "7.1.0.475",
           "AutoMapper": "10.1.1",
           "Dorsavi.Xamarin.Forms.Prism.Extensions": "1.0.0",
           "Dorsavi.Xamarin.Forms.RemoteServer.Models": "1.0.0",
@@ -11407,9 +11129,7 @@
           "XF.Material": "1.7.7",
           "Xamarin.Essentials": "1.6.1",
           "Xamarin.Essentials.Interfaces": "1.5.3.2",
-          "Xamarin.Forms": "4.8.0.1364",
-          "sqlite-net": "1.6.292",
-          "sqlite-net-sqlcipher": "1.7.335"
+          "Xamarin.Forms": "4.8.0.1364"
         },
         "compile": {
           "bin/placeholder/Dorsavi.Xamarin.Forms.dll": {}
@@ -11464,6 +11184,18 @@
       }
     },
     "UAP,Version=v10.0.16299/win10-x86-aot": {
+      "Acr.UserDialogs/7.1.0.475": {
+        "type": "package",
+        "dependencies": {
+          "Coding4Fun.Toolkit.Controls": "2.1.8"
+        },
+        "compile": {
+          "lib/uap10.0.16299/Acr.UserDialogs.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0.16299/Acr.UserDialogs.dll": {}
+        }
+      },
       "AutoMapper/10.1.1": {
         "type": "package",
         "dependencies": {
@@ -11475,6 +11207,17 @@
         },
         "runtime": {
           "lib/netstandard2.0/AutoMapper.dll": {}
+        }
+      },
+      "Coding4Fun.Toolkit.Controls/2.1.8": {
+        "type": "package",
+        "compile": {
+          "lib/netcore451/Coding4Fun.Toolkit.Controls.dll": {},
+          "lib/netcore451/Coding4Fun.Toolkit.dll": {}
+        },
+        "runtime": {
+          "lib/netcore451/Coding4Fun.Toolkit.Controls.dll": {},
+          "lib/netcore451/Coding4Fun.Toolkit.dll": {}
         }
       },
       "Com.Airbnb.Xamarin.Forms.Lottie/4.0.8": {
@@ -12614,9 +12357,6 @@
           "runtimes/aot/lib/netcore50/System.Private.Uri.dll": {}
         }
       },
-      "sqlite-net/1.6.292": {
-        "type": "package"
-      },
       "sqlite-net-pcl/1.4.118": {
         "type": "package",
         "dependencies": {
@@ -12627,18 +12367,6 @@
         },
         "runtime": {
           "lib/netstandard1.1/SQLite-net.dll": {}
-        }
-      },
-      "sqlite-net-sqlcipher/1.7.335": {
-        "type": "package",
-        "dependencies": {
-          "SQLitePCLRaw.bundle_e_sqlcipher": "2.0.3"
-        },
-        "compile": {
-          "lib/netstandard2.0/SQLite-net.dll": {}
-        },
-        "runtime": {
-          "lib/netstandard2.0/SQLite-net.dll": {}
         }
       },
       "SQLiteNetExtensions/2.1.0": {
@@ -12652,20 +12380,6 @@
         },
         "runtime": {
           "lib/netstandard1.1/SQLiteNetExtensions.dll": {}
-        }
-      },
-      "SQLitePCLRaw.bundle_e_sqlcipher/2.0.3": {
-        "type": "package",
-        "dependencies": {
-          "SQLitePCLRaw.core": "2.0.3",
-          "SQLitePCLRaw.lib.e_sqlcipher": "2.0.3",
-          "SQLitePCLRaw.provider.e_sqlcipher": "2.0.3"
-        },
-        "compile": {
-          "lib/netstandard2.0/SQLitePCLRaw.batteries_v2.dll": {}
-        },
-        "runtime": {
-          "lib/netstandard2.0/SQLitePCLRaw.batteries_v2.dll": {}
         }
       },
       "SQLitePCLRaw.bundle_green/1.1.5": {
@@ -12684,28 +12398,16 @@
           "lib/uap10.0/SQLitePCLRaw.batteries_v2.dll": {}
         }
       },
-      "SQLitePCLRaw.core/2.0.3": {
+      "SQLitePCLRaw.core/1.1.5": {
         "type": "package",
         "dependencies": {
-          "System.Memory": "4.5.3"
+          "NETStandard.Library": "1.6.0"
         },
         "compile": {
-          "lib/netstandard2.0/SQLitePCLRaw.core.dll": {}
+          "lib/uap10.0/SQLitePCLRaw.core.dll": {}
         },
         "runtime": {
-          "lib/netstandard2.0/SQLitePCLRaw.core.dll": {}
-        }
-      },
-      "SQLitePCLRaw.lib.e_sqlcipher/2.0.3": {
-        "type": "package",
-        "compile": {
-          "lib/netstandard2.0/_._": {}
-        },
-        "runtime": {
-          "lib/netstandard2.0/_._": {}
-        },
-        "native": {
-          "runtimes/win10-x86/nativeassets/uap10.0/e_sqlcipher.dll": {}
+          "lib/uap10.0/SQLitePCLRaw.core.dll": {}
         }
       },
       "SQLitePCLRaw.lib.e_sqlite3.v140/1.1.5": {
@@ -12715,18 +12417,6 @@
         },
         "build": {
           "build/_._": {}
-        }
-      },
-      "SQLitePCLRaw.provider.e_sqlcipher/2.0.3": {
-        "type": "package",
-        "dependencies": {
-          "SQLitePCLRaw.core": "2.0.3"
-        },
-        "compile": {
-          "lib/uap10.0/SQLitePCLRaw.provider.e_sqlcipher.dll": {}
-        },
-        "runtime": {
-          "lib/uap10.0/SQLitePCLRaw.provider.e_sqlcipher.dll": {}
         }
       },
       "SQLitePCLRaw.provider.e_sqlite3.uwp10/1.1.5": {
@@ -13096,6 +12786,7 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
+          "Acr.UserDialogs": "7.1.0.475",
           "AutoMapper": "10.1.1",
           "Dorsavi.Xamarin.Forms.Prism.Extensions": "1.0.0",
           "Dorsavi.Xamarin.Forms.RemoteServer.Models": "1.0.0",
@@ -13110,9 +12801,7 @@
           "XF.Material": "1.7.7",
           "Xamarin.Essentials": "1.6.1",
           "Xamarin.Essentials.Interfaces": "1.5.3.2",
-          "Xamarin.Forms": "4.8.0.1364",
-          "sqlite-net": "1.6.292",
-          "sqlite-net-sqlcipher": "1.7.335"
+          "Xamarin.Forms": "4.8.0.1364"
         },
         "compile": {
           "bin/placeholder/Dorsavi.Xamarin.Forms.dll": {}
@@ -13168,6 +12857,41 @@
     }
   },
   "libraries": {
+    "Acr.UserDialogs/7.1.0.475": {
+      "sha512": "iGW0uda9bmbGcPABm0UzDjSd5DtGwcTCkOg265aUxKhG9IW0HtoNA3gASMXK64hMye2A+9mfkcmWJDOudbhJWw==",
+      "type": "package",
+      "path": "acr.userdialogs/7.1.0.475",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "acr.userdialogs.7.1.0.475.nupkg.sha512",
+        "acr.userdialogs.nuspec",
+        "lib/monoandroid10.0/Acr.UserDialogs.dll",
+        "lib/monoandroid10.0/Acr.UserDialogs.pdb",
+        "lib/monoandroid10.0/Acr.UserDialogs.xml",
+        "lib/monoandroid90/Acr.UserDialogs.dll",
+        "lib/monoandroid90/Acr.UserDialogs.pdb",
+        "lib/monoandroid90/Acr.UserDialogs.xml",
+        "lib/netstandard2.0/Acr.UserDialogs.dll",
+        "lib/netstandard2.0/Acr.UserDialogs.pdb",
+        "lib/netstandard2.0/Acr.UserDialogs.xml",
+        "lib/uap10.0.16299/Acr.UserDialogs.dll",
+        "lib/uap10.0.16299/Acr.UserDialogs.pdb",
+        "lib/uap10.0.16299/Acr.UserDialogs.pri",
+        "lib/uap10.0.16299/Acr.UserDialogs.xml",
+        "lib/uap10.0.16299/Acr.UserDialogs/Acr.UserDialogs.xr.xml",
+        "lib/xamarinios10/Acr.UserDialogs.dll",
+        "lib/xamarinios10/Acr.UserDialogs.pdb",
+        "lib/xamarinios10/Acr.UserDialogs.xml",
+        "lib/xamarinmac20/Acr.UserDialogs.dll",
+        "lib/xamarinmac20/Acr.UserDialogs.pdb",
+        "lib/xamarinmac20/Acr.UserDialogs.xml",
+        "lib/xamarintvos10/Acr.UserDialogs.dll",
+        "lib/xamarintvos10/Acr.UserDialogs.pdb",
+        "lib/xamarintvos10/Acr.UserDialogs.xml",
+        "readme.txt"
+      ]
+    },
     "AutoMapper/10.1.1": {
       "sha512": "uMgbqOdu9ZG5cIOty0C85hzzayBH2i9BthnS5FlMqKtMSHDv4ts81a2jS1VFaDBVhlBeIqJ/kQKjQY95BZde9w==",
       "type": "package",
@@ -13182,6 +12906,47 @@
         "lib/net461/AutoMapper.xml",
         "lib/netstandard2.0/AutoMapper.dll",
         "lib/netstandard2.0/AutoMapper.xml"
+      ]
+    },
+    "Coding4Fun.Toolkit.Controls/2.1.8": {
+      "sha512": "PCRWgCiW9H8qzT8xYxNtpq4ZWpvh2gtrKAnWtEOXzapyXTEt8esCt0cqRwvosW+bytyfohonmB7UxB0EGXmdsQ==",
+      "type": "package",
+      "path": "coding4fun.toolkit.controls/2.1.8",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "coding4fun.toolkit.controls.2.1.8.nupkg.sha512",
+        "coding4fun.toolkit.controls.nuspec",
+        "content/ReadMe.Coding4Fun.Toolkit.txt",
+        "content/windowsphone8/Toolkit.Content/ApplicationBar.Cancel.png",
+        "content/windowsphone8/Toolkit.Content/ApplicationBar.Check.png",
+        "lib/netcore451/Coding4Fun.Toolkit.Controls.dll",
+        "lib/netcore451/Coding4Fun.Toolkit.Controls.pri",
+        "lib/netcore451/Coding4Fun.Toolkit.Controls/Coding4Fun.Toolkit.Controls.xr.xml",
+        "lib/netcore451/Coding4Fun.Toolkit.Controls/Themes/Generic.xbf",
+        "lib/netcore451/Coding4Fun.Toolkit.dll",
+        "lib/netcore451/Coding4Fun.Toolkit.pri",
+        "lib/windowsphone8/Coding4Fun.Toolkit.Controls.dll",
+        "lib/windowsphone8/Coding4Fun.Toolkit.dll",
+        "lib/windowsphone8/cs/Coding4Fun.Toolkit.Controls.resources.dll",
+        "lib/windowsphone8/da/Coding4Fun.Toolkit.Controls.resources.dll",
+        "lib/windowsphone8/de/Coding4Fun.Toolkit.Controls.resources.dll",
+        "lib/windowsphone8/es/Coding4Fun.Toolkit.Controls.resources.dll",
+        "lib/windowsphone8/fr/Coding4Fun.Toolkit.Controls.resources.dll",
+        "lib/windowsphone8/fr/hu/Coding4Fun.Toolkit.Controls.resources.dll",
+        "lib/windowsphone8/it/Coding4Fun.Toolkit.Controls.resources.dll",
+        "lib/windowsphone8/ko/Coding4Fun.Toolkit.Controls.resources.dll",
+        "lib/windowsphone8/no/Coding4Fun.Toolkit.Controls.resources.dll",
+        "lib/windowsphone8/pl/Coding4Fun.Toolkit.Controls.resources.dll",
+        "lib/windowsphone8/pt/Coding4Fun.Toolkit.Controls.resources.dll",
+        "lib/windowsphone8/ru/Coding4Fun.Toolkit.Controls.resources.dll",
+        "lib/windowsphone8/sk/Coding4Fun.Toolkit.Controls.resources.dll",
+        "lib/wpa81/Coding4Fun.Toolkit.Controls.dll",
+        "lib/wpa81/Coding4Fun.Toolkit.Controls.pri",
+        "lib/wpa81/Coding4Fun.Toolkit.Controls/Coding4Fun.Toolkit.Controls.xr.xml",
+        "lib/wpa81/Coding4Fun.Toolkit.Controls/Themes/Generic.xbf",
+        "lib/wpa81/Coding4Fun.Toolkit.dll",
+        "lib/wpa81/Coding4Fun.Toolkit.pri"
       ]
     },
     "Com.Airbnb.Xamarin.Forms.Lottie/4.0.8": {
@@ -18865,19 +18630,6 @@
         "runtimes/win/lib/netstandard1.0/System.Private.Uri.dll"
       ]
     },
-    "sqlite-net/1.6.292": {
-      "sha512": "/yXsrFYeUUYZiNELpicVG5fu0xJ0UdVgyZooqYws68NB9jLI5Ciievd96YOhtPdWY0O4F9l9XeE+446J/vnxiA==",
-      "type": "package",
-      "path": "sqlite-net/1.6.292",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "content/SQLite.cs",
-        "content/SQLiteAsync.cs",
-        "sqlite-net.1.6.292.nupkg.sha512",
-        "sqlite-net.nuspec"
-      ]
-    },
     "sqlite-net-pcl/1.4.118": {
       "sha512": "66wl2z26PpA/m+hY2UJudsHF3GpbbC8Scx9WvXC0MomQxrbclkb2jiavYsXH3AEXHsTAjKIWavmwKoRIPWsdAg==",
       "type": "package",
@@ -18894,20 +18646,6 @@
         "lib/portable-net45+wp8+wpa81+win8+MonoAndroid10+MonoTouch10+Xamarin.iOS10/SQLite-net.xml",
         "sqlite-net-pcl.1.4.118.nupkg.sha512",
         "sqlite-net-pcl.nuspec"
-      ]
-    },
-    "sqlite-net-sqlcipher/1.7.335": {
-      "sha512": "tGSEsF7o5FK+G6kL2cx+TvdlkvCt8J8oIEDtWyjf3krj3klt8JDzpZtwu0z7NV08B1w+Ruu4RHeGf+5KlA4Z2g==",
-      "type": "package",
-      "path": "sqlite-net-sqlcipher/1.7.335",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "LICENSE.txt",
-        "lib/netstandard2.0/SQLite-net.dll",
-        "lib/netstandard2.0/SQLite-net.xml",
-        "sqlite-net-sqlcipher.1.7.335.nupkg.sha512",
-        "sqlite-net-sqlcipher.nuspec"
       ]
     },
     "SQLiteNetExtensions/2.1.0": {
@@ -18937,23 +18675,6 @@
         "src/SQLiteNetExtensions/Extensions/TextBlob/TextBlobOperations.cs",
         "src/SQLiteNetExtensions/Extensions/WriteOperations.cs",
         "src/SQLiteNetExtensions/Properties/AssemblyInfo.cs"
-      ]
-    },
-    "SQLitePCLRaw.bundle_e_sqlcipher/2.0.3": {
-      "sha512": "GVvf7OENm4xLZaNtNUjKDyggG0GKSSM+Ku1wVjQ3lbOIgR+q2RyAiEqVEBNOcdqsRUJJjt6C4mNJeG/FOKoD7w==",
-      "type": "package",
-      "path": "sqlitepclraw.bundle_e_sqlcipher/2.0.3",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "lib/Xamarin.iOS10/SQLitePCLRaw.batteries_v2.dll",
-        "lib/net461/SQLitePCLRaw.batteries_v2.dll",
-        "lib/net461/SQLitePCLRaw.nativelibrary.dll",
-        "lib/netcoreapp3.0/SQLitePCLRaw.batteries_v2.dll",
-        "lib/netcoreapp3.0/SQLitePCLRaw.nativelibrary.dll",
-        "lib/netstandard2.0/SQLitePCLRaw.batteries_v2.dll",
-        "sqlitepclraw.bundle_e_sqlcipher.2.0.3.nupkg.sha512",
-        "sqlitepclraw.bundle_e_sqlcipher.nuspec"
       ]
     },
     "SQLitePCLRaw.bundle_green/1.1.5": {
@@ -19003,46 +18724,30 @@
         "sqlitepclraw.bundle_green.nuspec"
       ]
     },
-    "SQLitePCLRaw.core/2.0.3": {
-      "sha512": "9LO3qT7tP+0qBAQxg/PGLHPcsKri4H2zIiiMEg+7EGrnBbuUnJg1tcfKiiqFtRp74kZSAV6N0ZeSGYiodqYnoQ==",
+    "SQLitePCLRaw.core/1.1.5": {
+      "sha512": "NViT1KDYnPAQo7yoYmkAMWzT15ZjqbLTSZp9iTVwZDz7fBC5fQ9TYebOFUIxYxrD/RvBpYB8m9PtcL8x/QbKNg==",
       "type": "package",
-      "path": "sqlitepclraw.core/2.0.3",
+      "path": "sqlitepclraw.core/1.1.5",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "lib/netstandard2.0/SQLitePCLRaw.core.dll",
-        "sqlitepclraw.core.2.0.3.nupkg.sha512",
+        "lib/MonoAndroid/SQLitePCLRaw.core.dll",
+        "lib/Xamarin.Mac20/SQLitePCLRaw.core.dll",
+        "lib/Xamarin.iOS10/SQLitePCLRaw.core.dll",
+        "lib/net35/SQLitePCLRaw.core.dll",
+        "lib/net40/SQLitePCLRaw.core.dll",
+        "lib/net45/SQLitePCLRaw.core.dll",
+        "lib/netstandard1.0/SQLitePCLRaw.core.dll",
+        "lib/netstandard1.1/SQLitePCLRaw.core.dll",
+        "lib/portable-net40+sl5+netcore45+wp8+MonoAndroid10+MonoTouch10+Xamarin.iOS10/SQLitePCLRaw.core.dll",
+        "lib/portable-net45+netcore45+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10/SQLitePCLRaw.core.dll",
+        "lib/portable-net45+netcore45+wpa81+wp8+MonoAndroid10+MonoTouch10+Xamarin.iOS10/SQLitePCLRaw.core.dll",
+        "lib/uap10.0/SQLitePCLRaw.core.dll",
+        "lib/win8/SQLitePCLRaw.core.dll",
+        "lib/win81/SQLitePCLRaw.core.dll",
+        "lib/wpa81/SQLitePCLRaw.core.dll",
+        "sqlitepclraw.core.1.1.5.nupkg.sha512",
         "sqlitepclraw.core.nuspec"
-      ]
-    },
-    "SQLitePCLRaw.lib.e_sqlcipher/2.0.3": {
-      "sha512": "QSHBeLhiJpHBuecmcF3Qb5V5of6MdLxaUCJsCyvFPyEwXjeimRKHuxNiXImAtNY2NuSo/AbED6Q6+Nh2RoDngQ==",
-      "type": "package",
-      "path": "sqlitepclraw.lib.e_sqlcipher/2.0.3",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "build/net461/SQLitePCLRaw.lib.e_sqlcipher.targets",
-        "lib/net461/_._",
-        "lib/netstandard2.0/_._",
-        "runtimes/alpine-x64/native/libe_sqlcipher.so",
-        "runtimes/linux-arm/native/libe_sqlcipher.so",
-        "runtimes/linux-arm64/native/libe_sqlcipher.so",
-        "runtimes/linux-armel/native/libe_sqlcipher.so",
-        "runtimes/linux-musl-x64/native/libe_sqlcipher.so",
-        "runtimes/linux-x64/native/libe_sqlcipher.so",
-        "runtimes/linux-x86/native/libe_sqlcipher.so",
-        "runtimes/osx-x64/native/libe_sqlcipher.dylib",
-        "runtimes/win-arm/native/e_sqlcipher.dll",
-        "runtimes/win-arm64/native/e_sqlcipher.dll",
-        "runtimes/win-x64/native/e_sqlcipher.dll",
-        "runtimes/win-x86/native/e_sqlcipher.dll",
-        "runtimes/win10-arm/nativeassets/uap10.0/e_sqlcipher.dll",
-        "runtimes/win10-arm64/nativeassets/uap10.0/e_sqlcipher.dll",
-        "runtimes/win10-x64/nativeassets/uap10.0/e_sqlcipher.dll",
-        "runtimes/win10-x86/nativeassets/uap10.0/e_sqlcipher.dll",
-        "sqlitepclraw.lib.e_sqlcipher.2.0.3.nupkg.sha512",
-        "sqlitepclraw.lib.e_sqlcipher.nuspec"
       ]
     },
     "SQLitePCLRaw.lib.e_sqlite3.v140/1.1.5": {
@@ -19058,19 +18763,6 @@
         "runtimes/win10-x86/native/e_sqlite3.dll",
         "sqlitepclraw.lib.e_sqlite3.v140.1.1.5.nupkg.sha512",
         "sqlitepclraw.lib.e_sqlite3.v140.nuspec"
-      ]
-    },
-    "SQLitePCLRaw.provider.e_sqlcipher/2.0.3": {
-      "sha512": "FyFz7w22BHI4iENWP7nvWPdhf7ffuWPwXkBSCZPjqaRNPmX4YyQ6krE9hqzK8enKOLzxkQrHBXe68VcmeAkgRQ==",
-      "type": "package",
-      "path": "sqlitepclraw.provider.e_sqlcipher/2.0.3",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "lib/netstandard2.0/SQLitePCLRaw.provider.e_sqlcipher.dll",
-        "lib/uap10.0/SQLitePCLRaw.provider.e_sqlcipher.dll",
-        "sqlitepclraw.provider.e_sqlcipher.2.0.3.nupkg.sha512",
-        "sqlitepclraw.provider.e_sqlcipher.nuspec"
       ]
     },
     "SQLitePCLRaw.provider.e_sqlite3.uwp10/1.1.5": {
@@ -20632,6 +20324,7 @@
   },
   "projectFileDependencyGroups": {
     "UAP,Version=v10.0.16299": [
+      "Acr.UserDialogs >= 7.1.0.475",
       "Dorsavi.Xamarin.Forms >= 1.0.0",
       "Microsoft.NETCore.UniversalWindowsPlatform >= 6.2.10",
       "Prism.DryIoc.Forms >= 8.0.0.1909",
@@ -20683,6 +20376,10 @@
     "frameworks": {
       "uap10.0.16299": {
         "dependencies": {
+          "Acr.UserDialogs": {
+            "target": "Package",
+            "version": "[7.1.0.475, )"
+          },
           "Microsoft.NETCore.UniversalWindowsPlatform": {
             "target": "Package",
             "version": "[6.2.10, )"

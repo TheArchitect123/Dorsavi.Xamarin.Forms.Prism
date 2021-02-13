@@ -295,6 +295,10 @@
       "frameworks": {
         "uap10.0.16299": {
           "dependencies": {
+            "Acr.UserDialogs": {
+              "target": "Package",
+              "version": "[7.1.0.475, )"
+            },
             "Microsoft.NETCore.UniversalWindowsPlatform": {
               "target": "Package",
               "version": "[6.2.10, )"
@@ -396,6 +400,10 @@
         "netstandard2.0": {
           "targetAlias": "netstandard2.0",
           "dependencies": {
+            "Acr.UserDialogs": {
+              "target": "Package",
+              "version": "[7.1.0.475, )"
+            },
             "AutoMapper": {
               "target": "Package",
               "version": "[10.1.1, )"
@@ -451,14 +459,6 @@
             "Xamarin.Forms": {
               "target": "Package",
               "version": "[4.8.0.1364, )"
-            },
-            "sqlite-net": {
-              "target": "Package",
-              "version": "[1.6.292, )"
-            },
-            "sqlite-net-sqlcipher": {
-              "target": "Package",
-              "version": "[1.7.335, )"
             }
           },
           "imports": [

@@ -1,4 +1,5 @@
-﻿using Xamarin.Essentials;
+﻿using Acr.UserDialogs;
+using Xamarin.Essentials;
 using Xamarin.Essentials.Interfaces;
 using XF.Material.Forms.UI.Dialogs;
 
@@ -8,12 +9,18 @@ namespace Dorsavi.Xamarin.Forms.Helpers
     {
         public static async void OpenAlertDialogueWithMessage(string title, string message)
         {
-            await MainThread.InvokeOnMainThreadAsync(async () => await MaterialDialog.Instance.AlertAsync(message, title));
+            if (DeviceApiHelpers.isUWP())
+                await MainThread.InvokeOnMainThreadAsync(async () => await UserDialogs.Instance.AlertAsync(message, title, "Ok"));
+            else
+                await MainThread.InvokeOnMainThreadAsync(async () => await MaterialDialog.Instance.AlertAsync(message, title));
         }
 
         public static async void OpenAlertDialogueWithMessage(string message, IAppInfo appInfo)
         {
-            await MainThread.InvokeOnMainThreadAsync(async () => await MaterialDialog.Instance.AlertAsync(message, appInfo.Name));
+            if (DeviceApiHelpers.isUWP())
+                await MainThread.InvokeOnMainThreadAsync(async () => await UserDialogs.Instance.AlertAsync(message, okText: "Ok"));
+            else
+                await MainThread.InvokeOnMainThreadAsync(async () => await MaterialDialog.Instance.AlertAsync(message, appInfo.Name));
         }
     }
 }

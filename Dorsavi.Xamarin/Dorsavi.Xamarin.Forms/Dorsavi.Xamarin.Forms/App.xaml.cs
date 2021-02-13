@@ -10,6 +10,9 @@ namespace Dorsavi.Xamarin.Forms
     using global::Prism;
     using global::Prism.Ioc;
     using global::XF.Material.Forms.UI.Dialogs;
+    using Acr.UserDialogs;
+    using SQLite;
+    using Dorsavi.Xamarin.Forms.Services;
 
     public partial class App
     {
@@ -36,7 +39,7 @@ namespace Dorsavi.Xamarin.Forms
             //Register Internal Services 
             RegisterInternalServices.RegisterHttpClientServices();
             RegisterInternalServices.RegisterProfileMappingServices(ref containerRegistry);
-            RegisterInternalServices.RegisterSqliteEncryption(ref containerRegistry);
+            RegisterInternalServices.RegisterSqliteDatabase(ref containerRegistry);
         }
 
         private static class ExternalSubscriptionsManager

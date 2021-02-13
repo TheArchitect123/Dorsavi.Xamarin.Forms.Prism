@@ -23,16 +23,16 @@
         </Grid.ColumnDefinitions>
 
         <StackLayout Orientation="Vertical" Grid.Row="1">
-            <Label Text="{StaticResource Key=DefaultPage.WelcomeMessageTitle}" HorizontalTextAlignment="Center" FontFamily="{StaticResource Key=RoboticoRegular}" 
+            <Label Text="{StaticResource Key=DefaultPage.WelcomeMessageTitle}" HorizontalTextAlignment="Center"
+                   FontFamily="{StaticResource Key=FontFamily.RobotoRegular}" 
                FontSize="{StaticResource Key=DefaultPage.WelcomeMessageTitle.FontSize}"/>
 
-            <Label Text="{StaticResource Key=DefaultPage.WelcomeMessage}" HorizontalTextAlignment="Center" FontFamily="{StaticResource Key=RoboticoRegular}" 
+            <Label Text="{StaticResource Key=DefaultPage.WelcomeMessage}" HorizontalTextAlignment="Center"
+                   FontFamily="{StaticResource Key=FontFamily.RobotoRegular}" 
                FontSize="{StaticResource Key=DefaultPage.WelcomeMessage.FontSize}"/>
 
         </StackLayout>
 
-
-        <Button Command="{Binding }" Grid.Row="3" HorizontalOptions="CenterAndExpand"/>
-
+        <Button Command="{Binding IBeginNavigationToHomePage, Mode=OneWay}" Grid.Row="3" HorizontalOptions="CenterAndExpand"/>
     </Grid>
 </ContentPage>

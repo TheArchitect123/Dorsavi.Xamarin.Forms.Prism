@@ -1,0 +1,1 @@
+C:\Commercial\Dorsavi.Xamarin.Forms.Prism\Dorsavi.Xamarin\Dorsavi.Xamarin.Forms\Dorsavi.Xamarin.Forms.UWP\Dorsavi.Xamarin.Forms.UWP.csproj;x86

@@ -8,9 +8,11 @@ using Dorsavi.Xamarin.Forms.RemoteServer.Models;
 using Dorsavi.Xamarin.Forms.Services;
 using Dorsavi.Xamarin.Forms.Services.HttpClients;
 using Dorsavi.Xamarin.Forms.ViewModels.SubCellItems;
+using Prism.AppModel;
 using Prism.Commands;
 using Prism.Mvvm;
 using Prism.Navigation;
+using SQLiteNetExtensions.Extensions;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -22,7 +24,7 @@ using XF.Material.Forms.UI.Dialogs;
 
 namespace Dorsavi.Xamarin.Forms.ViewModels
 {
-    public sealed class DorsaviHomePageViewModel : ViewModelBase, IInitialize
+    public sealed class DorsaviHomePageViewModel : ViewModelBase, IPageLifecycleAware
     {
         private readonly IMapper mappingServiceImplementation;
         private readonly Database databaseServiceImplementation;
@@ -65,14 +67,20 @@ namespace Dorsavi.Xamarin.Forms.ViewModels
         }
 
         #region Lifecycle Management
-        public async void Initialize(INavigationParameters parameters)
+        public void OnAppearing()
         {
             FetchItemsFromRemoteServer();
+        }
+
+        public void OnDisappearing()
+        {
+
         }
         #endregion
 
         private async void FetchItemsFromRemoteServer()
         {
+            await MaterialAlertLoaderHelper.OpenLoaderWithMessageAsync("Fetching Data From Azure");
             Task.Factory.StartNew(async () =>
             {
                 try
@@ -81,28 +89,22 @@ namespace Dorsavi.Xamarin.Forms.ViewModels
                     if (fetchedResults != null && fetchedResults.Count != 0)
                     {
                         //Begin Processing the results
-                        this.databaseServiceImplementation.InsertItems<DorsaviItems>(fetchedResults.ConvertAll(w =>
-                        this.mappingServiceImplementation.Map<DorsaviItemsDto, DorsaviItems>(w)).ToList()); //Insert the Parent Elements into the Database
+                        //SQLiteNetExtensions will deal with the relationships between both entities
+                        var dorsaviItems = fetchedResults.ConvertAll(w =>
+                        {
+                            var mappedResult = this.mappingServiceImplementation.Map<DorsaviItemsDto, DorsaviItems>(w);
+                            if (w.Pets != null)
+                                mappedResult.PetItems = w.Pets.ConvertAll(i => this.mappingServiceImplementation.Map<DorsaviPetItemsDto, DorsaviPetItems>(i));
 
-                        //Add the Pet Items into the database
-                        this.databaseServiceImplementation.InsertItems<DorsaviPetItems>(fetchedResults.SelectMany(i => i.Pets).ToList()
-                                .ConvertAll((w) => this.mappingServiceImplementation.Map<DorsaviPetItemsDto, DorsaviPetItems>(w)));
+                            return mappedResult;
+                        }).ToList();
 
+                        this.databaseServiceImplementation.InsertItemsWithChildren(dorsaviItems); //Insert the Parent Elements into the Database
 
-                        //CONFIGURE THE FOREIGN KEY RELATIONSHIPS HERE
-                        //Query against each fetched item to get the Pets that belong to each Person
-                        //foreach (var fetchedItem in fetchedResults)
-                        //{
+                        //TEST
+                        var results = this.databaseServiceImplementation._connection.GetWithChildren<DorsaviPetItems>(2);
+                        var test = results.ParentItem.Name;
 
-
-                        //    //Begin Processing & Storing the items into the Database
-                        //    this.databaseServiceImplementation.InsertItems<DorsaviPetItems>(localPetItems);
-
-                        //    MainThread.InvokeOnMainThreadAsync(async () =>
-                        //    {
-                        //        this.RaisePropertyChanged(); //Force all properties to refresh
-                        //    });
-                        //}
                     }
                 }
                 catch (FailedFetchViaInternetConnectionException connectivityException)
@@ -117,7 +119,11 @@ namespace Dorsavi.Xamarin.Forms.ViewModels
                 {
                     MaterialAlertDialogueHelper.OpenAlertDialogueWithMessage("Could not Find Resource", "404, Could not find the queried results");
                 }
-            }, TaskCreationOptions.PreferFairness);
+                catch (Exception ex)
+                {
+                    MaterialAlertDialogueHelper.OpenAlertDialogueWithMessage("Unknown Error has Occurred", ex.Message);
+                }
+            }, TaskCreationOptions.PreferFairness).ContinueWith(e => MaterialAlertLoaderHelper.DismissLoaderAsync());
         }
     }
 }

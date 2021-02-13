@@ -2,6 +2,7 @@
 {
     using Dorsavi.Xamarin.Forms.Models;
     using global::SQLite;
+    using global::SQLiteNetExtensions.Extensions;
     using global::System;
     using global::System.Collections.Generic;
     using global::System.Linq;
@@ -10,8 +11,6 @@
     public class Database
     {
         public SQLiteConnection _connection { get; set; }
-        public string _databasePath { get; set; }
-
         public Database(SQLiteConnection connection)
         {
             if (_connection == null)
@@ -36,6 +35,7 @@
         }
 
         #region Api (Business Logic)
+        public void InsertItemsWithChildren<T>(IEnumerable<T> items) => _connection.InsertAllWithChildren(items);
 
         public void BeginTransaction() => _connection.BeginTransaction();
         public void CloseDatabase() => _connection.Close();
@@ -79,11 +79,6 @@
         public void Update<T>(T objectToUpdate) where T : class, new() => _connection.Update(objectToUpdate);
         public void Update<T>(IEnumerable<T> objectsToUpdate) where T : class, new() => _connection.UpdateAll(objectsToUpdate);
         public int UpdateItems<T>(IEnumerable<T> models) => _connection.UpdateAll(models);
-
-        IEnumerable<PersistentType> GetAll<PersistentType>()
-        {
-            return null;
-        }
 
         #endregion
     }

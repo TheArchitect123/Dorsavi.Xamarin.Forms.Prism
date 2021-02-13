@@ -1,9 +1,9 @@
 C:\Commercial\Dorsavi.Xamarin.Forms.Prism\Dorsavi.Xamarin\Dorsavi.Xamarin.Forms.Shared.Extensions\bin\Debug\netstandard2.0\Dorsavi.Xamarin.Forms.Shared.Extensions.deps.json
 C:\Commercial\Dorsavi.Xamarin.Forms.Prism\Dorsavi.Xamarin\Dorsavi.Xamarin.Forms.Shared.Extensions\bin\Debug\netstandard2.0\Dorsavi.Xamarin.Forms.Shared.Extensions.dll
 C:\Commercial\Dorsavi.Xamarin.Forms.Prism\Dorsavi.Xamarin\Dorsavi.Xamarin.Forms.Shared.Extensions\bin\Debug\netstandard2.0\Dorsavi.Xamarin.Forms.Shared.Extensions.pdb
-C:\Commercial\Dorsavi.Xamarin.Forms.Prism\Dorsavi.Xamarin\Dorsavi.Xamarin.Forms.Shared.Extensions\obj\Debug\netstandard2.0\Dorsavi.Xamarin.Forms.Shared.Extensions.csprojAssemblyReference.cache
 C:\Commercial\Dorsavi.Xamarin.Forms.Prism\Dorsavi.Xamarin\Dorsavi.Xamarin.Forms.Shared.Extensions\obj\Debug\netstandard2.0\Dorsavi.Xamarin.Forms.Shared.Extensions.AssemblyInfoInputs.cache
 C:\Commercial\Dorsavi.Xamarin.Forms.Prism\Dorsavi.Xamarin\Dorsavi.Xamarin.Forms.Shared.Extensions\obj\Debug\netstandard2.0\Dorsavi.Xamarin.Forms.Shared.Extensions.AssemblyInfo.cs
 C:\Commercial\Dorsavi.Xamarin.Forms.Prism\Dorsavi.Xamarin\Dorsavi.Xamarin.Forms.Shared.Extensions\obj\Debug\netstandard2.0\Dorsavi.Xamarin.Forms.Shared.Extensions.csproj.CoreCompileInputs.cache
 C:\Commercial\Dorsavi.Xamarin.Forms.Prism\Dorsavi.Xamarin\Dorsavi.Xamarin.Forms.Shared.Extensions\obj\Debug\netstandard2.0\Dorsavi.Xamarin.Forms.Shared.Extensions.dll
 C:\Commercial\Dorsavi.Xamarin.Forms.Prism\Dorsavi.Xamarin\Dorsavi.Xamarin.Forms.Shared.Extensions\obj\Debug\netstandard2.0\Dorsavi.Xamarin.Forms.Shared.Extensions.pdb
+C:\Commercial\Dorsavi.Xamarin.Forms.Prism\Dorsavi.Xamarin\Dorsavi.Xamarin.Forms.Shared.Extensions\obj\Debug\netstandard2.0\Dorsavi.Xamarin.Forms.Shared.Extensions.csprojAssemblyReference.cache
