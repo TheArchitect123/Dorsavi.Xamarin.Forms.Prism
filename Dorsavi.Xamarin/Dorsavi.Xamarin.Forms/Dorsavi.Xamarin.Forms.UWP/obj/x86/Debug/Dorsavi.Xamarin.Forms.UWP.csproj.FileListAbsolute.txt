@@ -161,3 +161,5 @@ C:\Commercial\Dorsavi.Xamarin.Forms.Prism\Dorsavi.Xamarin\Dorsavi.Xamarin.Forms\
 C:\Commercial\Dorsavi.Xamarin.Forms.Prism\Dorsavi.Xamarin\Dorsavi.Xamarin.Forms\Dorsavi.Xamarin.Forms.UWP\obj\x86\Debug\ProjectArchitectures.txt
 C:\Commercial\Dorsavi.Xamarin.Forms.Prism\Dorsavi.Xamarin\Dorsavi.Xamarin.Forms\Dorsavi.Xamarin.Forms.UWP\obj\x86\Debug\.winmd_cache\$Microsoft.Graphics.Canvas.winmd_636161003180000000.json
 C:\Commercial\Dorsavi.Xamarin.Forms.Prism\Dorsavi.Xamarin\Dorsavi.Xamarin.Forms\Dorsavi.Xamarin.Forms.UWP\obj\x86\Debug\.winmd_cache\$Microsoft.UI.Xaml.Markup.winmd_636885598160000000.json
+C:\Commercial\Dorsavi.Xamarin.Forms.Prism\Dorsavi.Xamarin\Dorsavi.Xamarin.Forms\Dorsavi.Xamarin.Forms.UWP\bin\x86\Debug\Dorsavi.Xamarin.Forms.RemoteServer.Resources.dll
+C:\Commercial\Dorsavi.Xamarin.Forms.Prism\Dorsavi.Xamarin\Dorsavi.Xamarin.Forms\Dorsavi.Xamarin.Forms.UWP\bin\x86\Debug\Dorsavi.Xamarin.Forms.RemoteServer.Resources.pdb

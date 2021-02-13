@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Dorsavi.Xamarin.Forms.Models
 {
-    internal class DorsaviPetItems
+    public class DorsaviPetItems
     {
         [PrimaryKey, AutoIncrement]
         public int Id { get; set; }

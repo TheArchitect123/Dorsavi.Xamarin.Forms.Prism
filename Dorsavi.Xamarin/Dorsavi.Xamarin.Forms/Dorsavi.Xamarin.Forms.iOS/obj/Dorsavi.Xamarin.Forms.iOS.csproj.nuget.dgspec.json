@@ -284,6 +284,18 @@
         "frameworks": {
           "xamarinios10": {
             "projectReferences": {
+              "C:\\Commercial\\Dorsavi.Xamarin.Forms.Prism\\Dorsavi.Xamarin\\Dorsavi.Xamarin.Forms.Prism.Extensions\\Dorsavi.Xamarin.Forms.Prism.Extensions.csproj": {
+                "projectPath": "C:\\Commercial\\Dorsavi.Xamarin.Forms.Prism\\Dorsavi.Xamarin\\Dorsavi.Xamarin.Forms.Prism.Extensions\\Dorsavi.Xamarin.Forms.Prism.Extensions.csproj"
+              },
+              "C:\\Commercial\\Dorsavi.Xamarin.Forms.Prism\\Dorsavi.Xamarin\\Dorsavi.Xamarin.Forms.RemoteServer.Models\\Dorsavi.Xamarin.Forms.RemoteServer.Models.csproj": {
+                "projectPath": "C:\\Commercial\\Dorsavi.Xamarin.Forms.Prism\\Dorsavi.Xamarin\\Dorsavi.Xamarin.Forms.RemoteServer.Models\\Dorsavi.Xamarin.Forms.RemoteServer.Models.csproj"
+              },
+              "C:\\Commercial\\Dorsavi.Xamarin.Forms.Prism\\Dorsavi.Xamarin\\Dorsavi.Xamarin.Forms.RemoteServer.Resources\\Dorsavi.Xamarin.Forms.RemoteServer.Resources.csproj": {
+                "projectPath": "C:\\Commercial\\Dorsavi.Xamarin.Forms.Prism\\Dorsavi.Xamarin\\Dorsavi.Xamarin.Forms.RemoteServer.Resources\\Dorsavi.Xamarin.Forms.RemoteServer.Resources.csproj"
+              },
+              "C:\\Commercial\\Dorsavi.Xamarin.Forms.Prism\\Dorsavi.Xamarin\\Dorsavi.Xamarin.Forms.Shared.Extensions\\Dorsavi.Xamarin.Forms.Shared.Extensions.csproj": {
+                "projectPath": "C:\\Commercial\\Dorsavi.Xamarin.Forms.Prism\\Dorsavi.Xamarin\\Dorsavi.Xamarin.Forms.Shared.Extensions\\Dorsavi.Xamarin.Forms.Shared.Extensions.csproj"
+              },
               "C:\\Commercial\\Dorsavi.Xamarin.Forms.Prism\\Dorsavi.Xamarin\\Dorsavi.Xamarin.Forms\\Dorsavi.Xamarin.Forms\\Dorsavi.Xamarin.Forms.csproj": {
                 "projectPath": "C:\\Commercial\\Dorsavi.Xamarin.Forms.Prism\\Dorsavi.Xamarin\\Dorsavi.Xamarin.Forms\\Dorsavi.Xamarin.Forms\\Dorsavi.Xamarin.Forms.csproj"
               }

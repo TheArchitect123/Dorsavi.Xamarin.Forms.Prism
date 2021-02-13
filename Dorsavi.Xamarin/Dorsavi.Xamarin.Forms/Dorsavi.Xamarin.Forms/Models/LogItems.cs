@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Dorsavi.Xamarin.Forms.Models
 {
-    internal class LogItems
+    public class LogItems
     {
         [PrimaryKey, AutoIncrement]
         public int Id { get; set; }

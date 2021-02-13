@@ -7,7 +7,7 @@ using Dorsavi.Xamarin.Forms.Prism.Extensions;
 using Dorsavi.Xamarin.Forms.RemoteServer.Models;
 using Dorsavi.Xamarin.Forms.Services;
 using Dorsavi.Xamarin.Forms.Services.HttpClients;
-using Dorsavi.Xamarin.Forms.ViewModels.SubCellItems;
+using Dorsavi.Xamarin.Forms.ViewModels.Collections;
 using Prism.AppModel;
 using Prism.Commands;
 using Prism.Mvvm;
@@ -35,23 +35,32 @@ namespace Dorsavi.Xamarin.Forms.ViewModels
             this.databaseServiceImplementation = databaseService;
 
             this.PageTitle = PageNames.HomePageName;
+
+            //Load Any Collections into Memory
+            FetchedItems = new ObservableCollection<DorsaviListItemViewModel>();
         }
 
         //Collections
-        private List<HomePageResultItemsViewModel> _FetchedItems;
-        public List<HomePageResultItemsViewModel> FetchedItems
+        private ObservableCollection<DorsaviListItemViewModel> _FetchedItems;
+        public ObservableCollection<DorsaviListItemViewModel> FetchedItems
         {
             get
             {
-                if (this.FetchedItems == null)
-                    return (this._FetchedItems = new List<HomePageResultItemsViewModel>());
-
                 return _FetchedItems;
             }
+            set => this.SetProperty(ref _FetchedItems, value);
         }
 
         //Load Items From the Remote Server
-        public bool IsCollectionRefreshing => false;
+        private bool _IsCollectionRefreshing;
+        public bool IsCollectionRefreshing
+        {
+            get
+            {
+                return _IsCollectionRefreshing;
+            }
+            set => this.SetProperty(ref _IsCollectionRefreshing, value);
+        }
 
         public ICommand RefreshItemsFromRemoteServerCommand => new RelayExtension(LoadResultsFromRemoteServerViaRefresh, () => true);
         public async void LoadResultsFromRemoteServerViaRefresh()
@@ -78,8 +87,29 @@ namespace Dorsavi.Xamarin.Forms.ViewModels
         }
         #endregion
 
+        private void fetchItemsFromLocalStorage(List<DorsaviItems> dorsaviItemsDto)
+        {
+            //Retrieve the Results from Local Storage
+            var fetchedResultsFromStorage = this.databaseServiceImplementation.GetEntireCollectionOfData(dorsaviItemsDto
+                .SelectMany(w => w.PetItems).Select(i => i.Id));
+
+            if (fetchedResultsFromStorage != null && fetchedResultsFromStorage.Count != 0)
+            {
+                MainThread.BeginInvokeOnMainThread(() =>
+                {
+                    this.FetchedItems.Add(new DorsaviListItemViewModel()
+                    {
+                        Name = fetchedResultsFromStorage[0].Key.Name,
+                        Gender = fetchedResultsFromStorage[0].Key.Gender
+                    });
+
+                    this.RaisePropertyChanged(); //Force Refresh the ViewModel
+                });
+            }
+        }
         private async void FetchItemsFromRemoteServer()
         {
+            IsCollectionRefreshing = true;
             await MaterialAlertLoaderHelper.OpenLoaderWithMessageAsync("Fetching Data From Azure");
             Task.Factory.StartNew(async () =>
             {
@@ -95,16 +125,16 @@ namespace Dorsavi.Xamarin.Forms.ViewModels
                             var mappedResult = this.mappingServiceImplementation.Map<DorsaviItemsDto, DorsaviItems>(w);
                             if (w.Pets != null)
                                 mappedResult.PetItems = w.Pets.ConvertAll(i => this.mappingServiceImplementation.Map<DorsaviPetItemsDto, DorsaviPetItems>(i));
+                            else
+                                mappedResult.PetItems = new List<DorsaviPetItems>() { };
 
                             return mappedResult;
                         }).ToList();
 
-                        this.databaseServiceImplementation.InsertItemsWithChildren(dorsaviItems); //Insert the Parent Elements into the Database
+                        this.databaseServiceImplementation.InsertItemsWithChildren(dorsaviItems); //Insert items into the database, with OneToMany Relationship between Users & their Pets
 
-                        //TEST
-                        var results = this.databaseServiceImplementation._connection.GetWithChildren<DorsaviPetItems>(2);
-                        var test = results.ParentItem.Name;
-
+                        //Manage the Fetched Results via Local Storage
+                        fetchItemsFromLocalStorage(dorsaviItems);
                     }
                 }
                 catch (FailedFetchViaInternetConnectionException connectivityException)
@@ -123,7 +153,12 @@ namespace Dorsavi.Xamarin.Forms.ViewModels
                 {
                     MaterialAlertDialogueHelper.OpenAlertDialogueWithMessage("Unknown Error has Occurred", ex.Message);
                 }
-            }, TaskCreationOptions.PreferFairness).ContinueWith(e => MaterialAlertLoaderHelper.DismissLoaderAsync());
+                finally
+                {
+                    IsCollectionRefreshing = false;
+                    await MaterialAlertLoaderHelper.DismissLoaderAsync();
+                }
+            }, TaskCreationOptions.PreferFairness);
         }
     }
 }

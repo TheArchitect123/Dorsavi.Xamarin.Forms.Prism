@@ -13,26 +13,34 @@
             <RowDefinition Height="*"/>
             <RowDefinition Height="100"/>
             <RowDefinition Height="*"/>
-            <RowDefinition Height="100"/>
+            <RowDefinition Height="50"/>
             <!--BeginBtn Row-->
             <RowDefinition Height="20"/>
         </Grid.RowDefinitions>
 
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="200"/>
+            <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
 
-        <StackLayout Orientation="Vertical" Grid.Row="1">
+        <StackLayout Orientation="Vertical" Grid.Row="1" Grid.ColumnSpan="3">
             <Label Text="{StaticResource Key=DefaultPage.WelcomeMessageTitle}" HorizontalTextAlignment="Center"
-                   FontFamily="{StaticResource Key=FontFamily.RobotoRegular}" 
+                   FontFamily="{StaticResource Key=FontFamily.RobotoRegular}" TextColor="{StaticResource Key=TopTitleTextColour}"
                FontSize="{StaticResource Key=DefaultPage.WelcomeMessageTitle.FontSize}"/>
 
             <Label Text="{StaticResource Key=DefaultPage.WelcomeMessage}" HorizontalTextAlignment="Center"
-                   FontFamily="{StaticResource Key=FontFamily.RobotoRegular}" 
+                   FontFamily="{StaticResource Key=FontFamily.RobotoRegular}" TextColor="{StaticResource Key=StandardDescriptionTextColour}"
+               FontSize="{StaticResource Key=DefaultPage.WelcomeMessage.FontSize}"/>
+
+            <Label Text="{Binding AuthorName, Mode=OneWay}" HorizontalTextAlignment="Center"
+                   FontFamily="{StaticResource Key=FontFamily.RobotoRegular}" TextColor="{StaticResource Key=BindableAuthorNameTextColour}"
                FontSize="{StaticResource Key=DefaultPage.WelcomeMessage.FontSize}"/>
 
         </StackLayout>
 
-        <Button Command="{Binding IBeginNavigationToHomePage, Mode=OneWay}" Grid.Row="3" HorizontalOptions="CenterAndExpand"/>
+        <Button Command="{Binding IBeginNavigationToHomePage, Mode=OneWay}" Text="{StaticResource Key=DefaultPage.BeginBtn}"
+                TextColor="{StaticResource Key=BeginBtnTextColour}"
+                Grid.Row="3" Grid.Column="1"/>
     </Grid>
 </ContentPage>

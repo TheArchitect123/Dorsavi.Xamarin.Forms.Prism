@@ -5,7 +5,7 @@
     using global::System.ComponentModel.DataAnnotations;
     using SQLiteNetExtensions.Attributes;
 
-    internal class DorsaviItems
+    public class DorsaviItems
     {
         [PrimaryKey, AutoIncrement]
         public int Id { get; set; }

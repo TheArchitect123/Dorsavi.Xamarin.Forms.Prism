@@ -220,13 +220,16 @@
     <AppxPackagedFile Include="C:\Commercial\Dorsavi.Xamarin.Forms.Prism\Dorsavi.Xamarin\Dorsavi.Xamarin.Forms\Dorsavi.Xamarin.Forms\bin\Debug\netstandard2.0\Dorsavi.Xamarin.Forms.dll">
       <PackagePath>Dorsavi.Xamarin.Forms.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Commercial\Dorsavi.Xamarin.Forms.Prism\Dorsavi.Xamarin\Dorsavi.Xamarin.Forms\Dorsavi.Xamarin.Forms\bin\Debug\netstandard2.0\Dorsavi.Xamarin.Forms.RemoteServer.Models.dll">
-      <PackagePath>Dorsavi.Xamarin.Forms.RemoteServer.Models.dll</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Commercial\Dorsavi.Xamarin.Forms.Prism\Dorsavi.Xamarin\Dorsavi.Xamarin.Forms\Dorsavi.Xamarin.Forms\bin\Debug\netstandard2.0\Dorsavi.Xamarin.Forms.Prism.Extensions.dll">
+    <AppxPackagedFile Include="C:\Commercial\Dorsavi.Xamarin.Forms.Prism\Dorsavi.Xamarin\Dorsavi.Xamarin.Forms.Prism.Extensions\bin\Debug\netstandard2.0\Dorsavi.Xamarin.Forms.Prism.Extensions.dll">
       <PackagePath>Dorsavi.Xamarin.Forms.Prism.Extensions.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Commercial\Dorsavi.Xamarin.Forms.Prism\Dorsavi.Xamarin\Dorsavi.Xamarin.Forms\Dorsavi.Xamarin.Forms\bin\Debug\netstandard2.0\Dorsavi.Xamarin.Forms.Shared.Extensions.dll">
+    <AppxPackagedFile Include="C:\Commercial\Dorsavi.Xamarin.Forms.Prism\Dorsavi.Xamarin\Dorsavi.Xamarin.Forms.RemoteServer.Models\bin\Debug\netstandard2.0\Dorsavi.Xamarin.Forms.RemoteServer.Models.dll">
+      <PackagePath>Dorsavi.Xamarin.Forms.RemoteServer.Models.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Commercial\Dorsavi.Xamarin.Forms.Prism\Dorsavi.Xamarin\Dorsavi.Xamarin.Forms.RemoteServer.Resources\bin\Debug\netstandard2.0\Dorsavi.Xamarin.Forms.RemoteServer.Resources.dll">
+      <PackagePath>Dorsavi.Xamarin.Forms.RemoteServer.Resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Commercial\Dorsavi.Xamarin.Forms.Prism\Dorsavi.Xamarin\Dorsavi.Xamarin.Forms.Shared.Extensions\bin\Debug\netstandard2.0\Dorsavi.Xamarin.Forms.Shared.Extensions.dll">
       <PackagePath>Dorsavi.Xamarin.Forms.Shared.Extensions.dll</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Dan Gerchcovich\.nuget\packages\win2d.uwp\1.20.0\lib\uap10.0\Microsoft.Graphics.Canvas.winmd">

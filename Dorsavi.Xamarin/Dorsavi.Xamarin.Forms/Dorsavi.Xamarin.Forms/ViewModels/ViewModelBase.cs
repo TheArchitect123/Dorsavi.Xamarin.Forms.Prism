@@ -14,9 +14,17 @@ namespace Dorsavi.Xamarin.Forms.ViewModels
             set { this.SetProperty(ref this._PageTitle, value); }
         }
 
+        private string _AuthorName;
+        public string AuthorName
+        {
+            get { return this._AuthorName; }
+            set { this.SetProperty(ref this._AuthorName, value); }
+        }
+
         public ViewModelBase(INavigationService navigationService)
         {
             this.NavigationService = navigationService;
+            this.AuthorName = "Dan Gerchcovich";
         }
     }
 }

@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Dorsavi.Xamarin.Forms.RemoteServer.Models\Dorsavi.Xamarin.Forms.RemoteServer.Models.csproj" />
+    <ProjectReference Include="..\Dorsavi.Xamarin.Forms.RemoteServer.Resources\Dorsavi.Xamarin.Forms.RemoteServer.Resources.csproj" />
+    <ProjectReference Include="..\Dorsavi.Xamarin.Forms.Shared.Extensions\Dorsavi.Xamarin.Forms.Shared.Extensions.csproj" />
+  </ItemGroup>
+
+</Project>

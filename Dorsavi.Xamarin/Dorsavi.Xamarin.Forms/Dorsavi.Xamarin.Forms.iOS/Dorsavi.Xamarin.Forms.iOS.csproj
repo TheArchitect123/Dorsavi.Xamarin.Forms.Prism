@@ -218,6 +218,22 @@
     <PackageReference Include="Prism.DryIoc.Forms" Version="8.0.0.1909" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\Dorsavi.Xamarin.Forms.Prism.Extensions\Dorsavi.Xamarin.Forms.Prism.Extensions.csproj">
+      <Project>{19804b6f-5b63-4cfe-b137-52573b256b89}</Project>
+      <Name>Dorsavi.Xamarin.Forms.Prism.Extensions</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Dorsavi.Xamarin.Forms.RemoteServer.Models\Dorsavi.Xamarin.Forms.RemoteServer.Models.csproj">
+      <Project>{dde754ea-392a-4d9d-a513-be6d2c3f183d}</Project>
+      <Name>Dorsavi.Xamarin.Forms.RemoteServer.Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Dorsavi.Xamarin.Forms.RemoteServer.Resources\Dorsavi.Xamarin.Forms.RemoteServer.Resources.csproj">
+      <Project>{f510bd46-5240-403a-b8f0-237953166781}</Project>
+      <Name>Dorsavi.Xamarin.Forms.RemoteServer.Resources</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Dorsavi.Xamarin.Forms.Shared.Extensions\Dorsavi.Xamarin.Forms.Shared.Extensions.csproj">
+      <Project>{76c461a6-401a-480a-9ace-81b6c53cf242}</Project>
+      <Name>Dorsavi.Xamarin.Forms.Shared.Extensions</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Dorsavi.Xamarin.Forms\Dorsavi.Xamarin.Forms.csproj">
       <Project>{A682884C-CB44-4A89-B752-27BB634E0ABE}</Project>
       <Name>Dorsavi.Xamarin.Forms</Name>

@@ -17,7 +17,7 @@ namespace Dorsavi.Xamarin.Forms.Droid
         public override void OnCreate()
         {
             base.OnCreate();
-            Xamarin.Essentials.Platform.Init(this);
+            global::Xamarin.Essentials.Platform.Init(this);
         }
     }
 }
